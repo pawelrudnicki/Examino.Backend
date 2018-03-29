@@ -1,0 +1,14 @@
+/home/jarvis/ExamApp/src/ExamApp.Api/bin/Debug/netcoreapp2.0/ExamApp.Api.deps.json
+/home/jarvis/ExamApp/src/ExamApp.Api/bin/Debug/netcoreapp2.0/ExamApp.Api.runtimeconfig.json
+/home/jarvis/ExamApp/src/ExamApp.Api/bin/Debug/netcoreapp2.0/ExamApp.Api.runtimeconfig.dev.json
+/home/jarvis/ExamApp/src/ExamApp.Api/bin/Debug/netcoreapp2.0/ExamApp.Api.dll
+/home/jarvis/ExamApp/src/ExamApp.Api/bin/Debug/netcoreapp2.0/ExamApp.Api.pdb
+/home/jarvis/ExamApp/src/ExamApp.Api/bin/Debug/netcoreapp2.0/ExamApp.Core.dll
+/home/jarvis/ExamApp/src/ExamApp.Api/bin/Debug/netcoreapp2.0/ExamApp.Infrastructure.dll
+/home/jarvis/ExamApp/src/ExamApp.Api/bin/Debug/netcoreapp2.0/ExamApp.Infrastructure.pdb
+/home/jarvis/ExamApp/src/ExamApp.Api/bin/Debug/netcoreapp2.0/ExamApp.Core.pdb
+/home/jarvis/ExamApp/src/ExamApp.Api/obj/Debug/netcoreapp2.0/ExamApp.Api.csproj.CoreCompileInputs.cache
+/home/jarvis/ExamApp/src/ExamApp.Api/obj/Debug/netcoreapp2.0/ExamApp.Api.AssemblyInfoInputs.cache
+/home/jarvis/ExamApp/src/ExamApp.Api/obj/Debug/netcoreapp2.0/ExamApp.Api.AssemblyInfo.cs
+/home/jarvis/ExamApp/src/ExamApp.Api/obj/Debug/netcoreapp2.0/ExamApp.Api.dll
+/home/jarvis/ExamApp/src/ExamApp.Api/obj/Debug/netcoreapp2.0/ExamApp.Api.pdb

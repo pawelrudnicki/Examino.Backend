@@ -1,0 +1,8 @@
+/home/jarvis/ExamApp/src/ExamApp.Core/bin/Debug/netstandard2.0/ExamApp.Core.deps.json
+/home/jarvis/ExamApp/src/ExamApp.Core/bin/Debug/netstandard2.0/ExamApp.Core.dll
+/home/jarvis/ExamApp/src/ExamApp.Core/bin/Debug/netstandard2.0/ExamApp.Core.pdb
+/home/jarvis/ExamApp/src/ExamApp.Core/obj/Debug/netstandard2.0/ExamApp.Core.csproj.CoreCompileInputs.cache
+/home/jarvis/ExamApp/src/ExamApp.Core/obj/Debug/netstandard2.0/ExamApp.Core.AssemblyInfoInputs.cache
+/home/jarvis/ExamApp/src/ExamApp.Core/obj/Debug/netstandard2.0/ExamApp.Core.AssemblyInfo.cs
+/home/jarvis/ExamApp/src/ExamApp.Core/obj/Debug/netstandard2.0/ExamApp.Core.dll
+/home/jarvis/ExamApp/src/ExamApp.Core/obj/Debug/netstandard2.0/ExamApp.Core.pdb
