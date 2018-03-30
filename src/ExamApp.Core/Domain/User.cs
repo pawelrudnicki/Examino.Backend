@@ -18,10 +18,40 @@ namespace ExamApp.Core.Domain
         {
             Id = id;
             Role = role;
-            Name = name;
-            Email = email;
-            Password = password;
+            SetName(name);
+            SetEmail(email);
+            SetPassword(password);
             CreatedAt = DateTime.UtcNow;
+        }
+
+        public void SetName(string name)
+        {
+            if(string.IsNullOrWhiteSpace(name))
+            {
+                throw new Exception("Name can not be empty.");
+            }
+
+            Name = name;
+        }
+
+        public void SetEmail(string email)
+        {
+            if(string.IsNullOrWhiteSpace(email))
+            {
+                throw new Exception("Email or password can not be empty.");
+            }
+
+            Email = email;
+        }
+
+        public void SetPassword(string password)
+        {
+            if(string.IsNullOrWhiteSpace(password))
+            {
+                throw new Exception("Email or password can not be empty.");
+            }
+
+            Password = password;
         }
     }
 }
