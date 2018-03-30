@@ -9,7 +9,14 @@ namespace ExamApp.Infrastructure.Repositories
 {
     public class ExamRepository : IExamRepository
     {
-        private static readonly ISet<Exam> _exams = new HashSet<Exam>();
+        private static readonly ISet<Exam> _exams = new HashSet<Exam>
+        {
+            new Exam(Guid.NewGuid(), "Exam 1", "Exam 1 description",
+                DateTime.UtcNow.AddHours(2), DateTime.UtcNow.AddHours(4)),
+            new Exam(Guid.NewGuid(), "Exam 2", "Exam 2 description",
+                DateTime.UtcNow.AddHours(5), DateTime.UtcNow.AddHours(10)),
+        };
+    
 
         public async Task<Exam> GetAsync(Guid id)
             => await Task.FromResult(_exams.SingleOrDefault(x => x.Id == id));
