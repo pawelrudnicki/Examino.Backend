@@ -2,8 +2,10 @@ using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using AutoMapper;
+using ExamApp.Core.Domain;
 using ExamApp.Core.Repositories;
 using ExamApp.Infrastructure.DTO;
+using ExamApp.Infrastructure.Extensions;
 
 namespace ExamApp.Infrastructure.Services
 {
@@ -18,18 +20,18 @@ namespace ExamApp.Infrastructure.Services
             _mapper = mapper;
         }
 
-        public async Task<ExamDto> GetAsync(Guid id)
+        public async Task<ExamDetailsDto> GetAsync(Guid id)
         {
             var @exam = await _examRepository.GetAsync(id);
 
-            return _mapper.Map<ExamDto>(@exam);
+            return _mapper.Map<ExamDetailsDto>(@exam);
         }
 
-        public async Task<ExamDto> GetAsync(string name)
+        public async Task<ExamDetailsDto> GetAsync(string name)
         {
             var @exam = await _examRepository.GetAsync(name);
 
-            return _mapper.Map<ExamDto>(@exam);
+            return _mapper.Map<ExamDetailsDto>(@exam);
         }
 
         public async Task<IEnumerable<ExamDto>> BrowseAsync(string name = null)
@@ -41,22 +43,39 @@ namespace ExamApp.Infrastructure.Services
 
         public async Task CreateAsync(Guid id, string name, string description, DateTime startDate, DateTime endDate)
         {
-            throw new NotImplementedException();
+            var @exam = await _examRepository.GetAsync(name);
+            if(@exam != null)
+            {
+                throw new Exception($"Exam named: '{name}' already exists.");
+            }
+            @exam = new Exam(id, name, description, startDate, endDate);
+            await _examRepository.AddAsync(@exam);
         }
 
         public async Task AddExerciseAsync(Guid examId, string question, string answerA, string answerB, string answerC, string answerD)
         {
-            throw new NotImplementedException();
+            var @exam = await _examRepository.GetOrFailAsync(examId);
+            @exam.AddExercise(question, answerA, answerB, answerC, answerD);
+            await _examRepository.UpdateAsync(@exam);
         } 
 
         public async Task UpdateAsync(Guid id, string name, string description)
         {
-            throw new NotImplementedException();
+            var @exam = await _examRepository.GetAsync(name);
+            if(@exam != null)
+            {
+                throw new Exception($"Exam named: '{name}' already exists.");
+            }
+            @exam = await _examRepository.GetOrFailAsync(id);
+            @exam.SetName(name);
+            @exam.SetDescription(description);
+            await _examRepository.UpdateAsync(@exam);
         } 
 
         public async Task DeleteAsync(Guid id)
         {
-            throw new NotImplementedException();
+            var @exam = await _examRepository.GetOrFailAsync(id);
+            await _examRepository.DeleteAsync(@exam);
         }
     }
 }

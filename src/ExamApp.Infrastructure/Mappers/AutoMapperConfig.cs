@@ -10,6 +10,8 @@ namespace ExamApp.Infrastructure.Mappers
             => new MapperConfiguration(cfg =>
             {
                 cfg.CreateMap<Exam, ExamDto>();
+                cfg.CreateMap<Exam, ExamDetailsDto>();
+                cfg.CreateMap<Exercise, ExerciseDto>();
             })
             .CreateMapper();
     }

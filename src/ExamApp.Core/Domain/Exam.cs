@@ -20,11 +20,31 @@ namespace ExamApp.Core.Domain
         public Exam(Guid id, string name, string description, DateTime startDate, DateTime endDate)
         {
             Id = id;
-            Name = name;
-            Description = description;
+            SetName(name);
+            SetDescription(description);
             StartDate = startDate;
             EndDate = endDate;
             CreatedAt = DateTime.UtcNow;
+            UpdatedAt = DateTime.UtcNow;
+        }
+
+        public void SetName(string name)
+        {
+            if(string.IsNullOrWhiteSpace(name))
+            {
+                throw new Exception($"Exam with id '{Id}' can not have an empty name.");
+            }
+            Name = name;
+            UpdatedAt = DateTime.UtcNow;
+        }
+
+        public void SetDescription(string description)
+        {
+            if(string.IsNullOrWhiteSpace(description))
+            {
+                throw new Exception($"Exam with id '{Id}' can not have an empty description.");
+            }
+            Description = description;
             UpdatedAt = DateTime.UtcNow;
         }
 
