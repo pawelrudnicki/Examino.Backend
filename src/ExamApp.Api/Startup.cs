@@ -33,6 +33,7 @@ namespace ExamApp.Api
             services.AddScoped<IExamRepository, ExamRepository>();
             services.AddScoped<IUserRepository, UserRepository>();
             services.AddScoped<IExamService, ExamService>();
+            services.AddScoped<IUserService, UserService>();
             services.AddSingleton(AutoMapperConfig.Initialize());
         }
 
