@@ -4784,7 +4784,8 @@
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
           "AutoMapper": "6.2.2",
-          "ExamApp.Core": "1.0.0"
+          "ExamApp.Core": "1.0.0",
+          "Microsoft.AspNetCore.Authentication.JwtBearer": "2.0.3"
         },
         "compile": {
           "bin/placeholder/ExamApp.Infrastructure.dll": {}
