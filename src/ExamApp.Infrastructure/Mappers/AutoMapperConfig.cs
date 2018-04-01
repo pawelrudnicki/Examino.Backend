@@ -12,6 +12,7 @@ namespace ExamApp.Infrastructure.Mappers
                 cfg.CreateMap<Exam, ExamDto>();
                 cfg.CreateMap<Exam, ExamDetailsDto>();
                 cfg.CreateMap<Exercise, ExerciseDto>();
+                cfg.CreateMap<User, AccountDto>();
             })
             .CreateMapper();
     }

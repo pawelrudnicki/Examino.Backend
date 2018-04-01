@@ -35,7 +35,7 @@ namespace ExamApp.Api
         public IConfiguration Configuration { get; }
 
         // This method gets called by the runtime. Use this method to add services to the container.
-        public void ConfigureServices(IServiceCollection services, IApplicationBuilder app)
+        public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc()
                 .AddJsonOptions(x => x.SerializerSettings.Formatting = Formatting.Indented);
@@ -43,19 +43,21 @@ namespace ExamApp.Api
             services.AddScoped<IUserRepository, UserRepository>();
             services.AddScoped<IExamService, ExamService>();
             services.AddScoped<IUserService, UserService>();
-            services.AddSingleton(AutoMapperConfig.Initialize());
+            services.AddSingleton<IJwtHandler, JwtHandler>(); 
+            services.AddAuthorization();
             services.Configure<JwtSettings>(Configuration.GetSection("jwt"));
-            var jwtSettings = app.ApplicationServices.GetService<JwtSettings>();
+            services.AddSingleton(AutoMapperConfig.Initialize());
             services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
             .AddJwtBearer(options =>
             {
                 options.TokenValidationParameters = new TokenValidationParameters
                 {
-                    ValidIssuer = jwtSettings.Issuer,
+                    ValidIssuer = "http://localhost:5000",
                     ValidateAudience = false,
-                    IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(jwtSettings.Key))
+                    IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes("super_secret_123!"))
                 };
             });
+            
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
