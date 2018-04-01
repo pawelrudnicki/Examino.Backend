@@ -31,7 +31,7 @@ namespace ExamApp.Infrastructure.Services
 
             var expires = now.AddMinutes(_jwtSettings.ExpiryMinutes);
            
-            var signingCredentials = new SigningCredentials(new SymmetricSecurityKey(Encoding.UTF8.GetBytes(jwtSettings.Key)),
+            var signingCredentials = new SigningCredentials(new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_jwtSettings.Key)),
                 SecurityAlgorithms.HmacSha256);
             var jwt = new JwtSecurityToken(
                 issuer: _jwtSettings.Issuer,
