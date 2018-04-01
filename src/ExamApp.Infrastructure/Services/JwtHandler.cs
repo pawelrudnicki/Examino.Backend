@@ -2,7 +2,9 @@ using System;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
+using System.Threading.Tasks;
 using ExamApp.Infrastructure.DTO;
+using ExamApp.Infrastructure.Extensions;
 using ExamApp.Infrastructure.Settings;
 using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
@@ -26,7 +28,7 @@ namespace ExamApp.Infrastructure.Services
                 new Claim(JwtRegisteredClaimNames.UniqueName, userId.ToString()),
                 new Claim(ClaimTypes.Role, role),
                 new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString()),
-                new Claim(JwtRegisteredClaimNames.Iat, now.Ticks.ToString()),
+                new Claim(JwtRegisteredClaimNames.Iat, now.ToTimestamp().ToString()),
             };
 
             var expires = now.AddMinutes(_jwtSettings.ExpiryMinutes);
@@ -45,7 +47,7 @@ namespace ExamApp.Infrastructure.Services
             return new JwtDto
             {
                 Token = token,
-                Expires = expires.Ticks
+                Expires = expires.ToTimestamp()
             };
         }
     }

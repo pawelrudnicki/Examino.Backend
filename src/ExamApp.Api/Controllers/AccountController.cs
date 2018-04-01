@@ -2,13 +2,14 @@ using System;
 using System.Threading.Tasks;
 using ExamApp.Infrastructure.Commands.Users;
 using ExamApp.Infrastructure.Services;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace ExamApp.Api.Controllers
 {
-    public class AccountController : Controller
+    public class AccountController : ApiControllerBase
     {
-        private IUserService _userService;
+        private readonly IUserService _userService;
 
         public AccountController(IUserService userService)
         {
@@ -16,10 +17,9 @@ namespace ExamApp.Api.Controllers
         }
 
         [HttpGet]
+        [Authorize]
         public async Task<IActionResult> Get()
-        {
-            throw new NotImplementedException();
-        }
+            => Json(await _userService.GetAccountAsync(UserId));
 
         [HttpGet("exercises")]
         public async Task<IActionResult> GetExercises()
@@ -28,18 +28,16 @@ namespace ExamApp.Api.Controllers
         }
 
         [HttpPost("register")]
-        public async Task<IActionResult> Post(Register command)
+        public async Task<IActionResult> Post([FromBody]Register command)
         {
             await _userService.RegisterAsync(Guid.NewGuid(), 
                 command.Email, command.Name, command.Password, command.Role);
 
-            return Created("/accout", null);
+            return Created("/account", null);
         }
 
         [HttpPost("login")]
-        public async Task<IActionResult> Post(Login command)
-        {
-            throw new NotImplementedException();
-        }
+        public async Task<IActionResult> Post([FromBody]Login command)
+            => Json(await _userService.LoginAsync(command.Email, command.Password));
     }
 }
