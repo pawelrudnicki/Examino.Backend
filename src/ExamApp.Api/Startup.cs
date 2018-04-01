@@ -44,7 +44,7 @@ namespace ExamApp.Api
             services.AddScoped<IExamService, ExamService>();
             services.AddScoped<IUserService, UserService>();
             services.AddSingleton<IJwtHandler, JwtHandler>(); 
-            services.AddAuthorization();
+            services.AddAuthorization(x => x.AddPolicy("HasAdminRole", p => p.RequireRole("admin")));
             services.Configure<JwtSettings>(Configuration.GetSection("jwt"));
             services.AddSingleton(AutoMapperConfig.Initialize());
             services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
