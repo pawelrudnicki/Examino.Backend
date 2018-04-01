@@ -2,6 +2,7 @@ using System;
 using System.Threading.Tasks;
 using ExamApp.Infrastructure.Commands.Exams;
 using ExamApp.Infrastructure.Services;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace ExamApp.Api.Controllers
@@ -36,6 +37,7 @@ namespace ExamApp.Api.Controllers
         }
 
         [HttpPost]
+        [Authorize(Policy = "HasAdminRole")]
         public async Task<IActionResult> Post([FromBody]CreateExam command)
         {
             command.ExamId = Guid.NewGuid();
@@ -48,6 +50,7 @@ namespace ExamApp.Api.Controllers
         }
 
         [HttpPut("{examId}")]
+        [Authorize(Policy = "HasAdminRole")]
         public async Task<IActionResult> Put(Guid examId, [FromBody]UpdateExam command)
         {
             await _examService.UpdateAsync(examId, command.Name,
@@ -57,6 +60,7 @@ namespace ExamApp.Api.Controllers
         }
 
         [HttpDelete("{examId}")]
+        [Authorize(Policy = "HasAdminRole")]
         public async Task<IActionResult> Delete(Guid examId)
         {
             await _examService.DeleteAsync(examId);
