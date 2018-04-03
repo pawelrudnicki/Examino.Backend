@@ -4,6 +4,6 @@ namespace ExamApp.Infrastructure.DTO
 {
     public class ExamDetailsDto : ExamDto
     {
-        public IEnumerable<ExerciseDto> Examples { get; set; }
+        public IEnumerable<ExerciseDto> Exercises { get; set; }
     }
 }

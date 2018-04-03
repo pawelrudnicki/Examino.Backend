@@ -49,7 +49,7 @@ namespace ExamApp.Core.Domain
         }
 
         public void AddExercise(string question, string answerA, string answerB, string answerC, string answerD)
-        {
+        { 
             _exercises.Add(new Exercise(this, question, answerA, answerB, answerC, answerD));
         }
     }

@@ -27,6 +27,7 @@ namespace ExamApp.Api.Controllers
         [HttpGet("{eventId}")]
         public async Task<IActionResult> Get(Guid eventId)
         {
+
             var @exam = await _examService.GetAsync(eventId);
             if(@exam == null)
             {
