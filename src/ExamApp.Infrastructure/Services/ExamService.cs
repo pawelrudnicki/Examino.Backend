@@ -20,18 +20,18 @@ namespace ExamApp.Infrastructure.Services
             _mapper = mapper;
         }
 
-        public async Task<ExamDetailsDto> GetAsync(Guid id)
+        public async Task<ExamDto> GetAsync(Guid id)
         {
             var @exam = await _examRepository.GetAsync(id);
 
-            return _mapper.Map<ExamDetailsDto>(@exam);
+            return _mapper.Map<ExamDto>(@exam);
         }
 
-        public async Task<ExamDetailsDto> GetAsync(string name)
+        public async Task<ExamDto> GetAsync(string name)
         {
             var @exam = await _examRepository.GetAsync(name);
 
-            return _mapper.Map<ExamDetailsDto>(@exam);
+            return _mapper.Map<ExamDto>(@exam);
         }
 
         public async Task<IEnumerable<ExamDto>> BrowseAsync(string name = null)
@@ -51,13 +51,6 @@ namespace ExamApp.Infrastructure.Services
             @exam = new Exam(id, name, description, startDate, endDate);
             await _examRepository.AddAsync(@exam);
         }
-
-        public async Task AddExerciseAsync(Guid examId, string question, string answerA, string answerB, string answerC, string answerD)
-        {
-            var @exam = await _examRepository.GetOrFailAsync(examId);
-            @exam.AddExercise(question, answerA, answerB, answerC, answerD);
-            await _examRepository.UpdateAsync(@exam);
-        } 
 
         public async Task UpdateAsync(Guid id, string name, string description)
         {

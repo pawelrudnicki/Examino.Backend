@@ -42,6 +42,7 @@ namespace ExamApp.Api
             services.AddScoped<IExamRepository, ExamRepository>();
             services.AddScoped<IUserRepository, UserRepository>();
             services.AddScoped<IExamService, ExamService>();
+            services.AddScoped<IExamExerciseService, ExamExerciseService>();
             services.AddScoped<IUserService, UserService>();
             services.AddSingleton<IJwtHandler, JwtHandler>(); 
             services.AddAuthorization(x => x.AddPolicy("HasAdminRole", p => p.RequireRole("admin")));

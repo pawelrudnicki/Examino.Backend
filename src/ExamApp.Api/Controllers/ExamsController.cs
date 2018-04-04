@@ -44,8 +44,6 @@ namespace ExamApp.Api.Controllers
             command.ExamId = Guid.NewGuid();
             await _examService.CreateAsync(command.ExamId, command.Name,
                 command.Description, command.StartDate, command.EndDate);
-            await _examService.AddExerciseAsync(command.ExamId, command.Question, 
-                command.AnswerA, command.AnswerB, command.AnswerC, command.AnswerD);
             
             return Created($"/exams/{command.ExamId}", null);
         }
