@@ -1,5 +1,6 @@
 using System;
 using System.Threading.Tasks;
+using ExamApp.Core.Domain;
 using ExamApp.Infrastructure.Commands.Exams;
 using ExamApp.Infrastructure.Services;
 using Microsoft.AspNetCore.Authorization;
@@ -7,7 +8,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace ExamApp.Api.Controllers
 {
-    [Route("exams/exercises")]
+    [Route("/exams/exercises")]
     public class ExamsExercisesController : ApiControllerBase
     {
         private readonly IExamService _examService;
@@ -21,9 +22,9 @@ namespace ExamApp.Api.Controllers
 
         [Authorize(Policy = "HasAdminRole")]
         [HttpPost]
-        public async Task<IActionResult> Post(Guid examId, [FromBody]CreateExamExercise command)
+        public async Task<IActionResult> Post([FromBody]CreateExamExercise command)
         {
-            await _examExerciseService.AddAsync(examId, command.Name, command.Question,
+            await _examExerciseService.AddAsync(command.ExamId, command.Name, command.Question,
                 command.AnswerA, command.AnswerB, command.AnswerC, command.AnswerD);
 
             return NoContent();

@@ -8,8 +8,8 @@ namespace ExamApp.Infrastructure.Services
 {
     public interface IExamService
     {
-        Task<ExamDto> GetAsync(Guid id);
-        Task<ExamDto> GetAsync(string name);
+        Task<ExamDetailsDto> GetAsync(Guid id);
+        Task<ExamDetailsDto> GetAsync(string name);
         Task<IEnumerable<ExamDto>> BrowseAsync(string name = null);
         Task CreateAsync(Guid id, string name, string description,
             DateTime startDate, DateTime endDate);
