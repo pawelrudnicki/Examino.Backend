@@ -32,9 +32,9 @@ namespace ExamApp.Api.Controllers
 
         [Authorize(Policy = "HasAdminRole")]
         [HttpDelete]
-        public async Task<IActionResult> Delete(Guid examId, [FromBody]DeleteExamExercise command)
+        public async Task<IActionResult> Delete([FromBody]DeleteExamExercise command)
         {
-            await _examExerciseService.DeleteAsync(examId, command.Name);
+            await _examExerciseService.DeleteAsync(command.ExamId, command.Name);
 
             return NoContent();
         }
