@@ -27,8 +27,7 @@ namespace ExamApp.Core.Domain
             Id = id;
             SetName(name);
             SetDescription(description);
-            StartDate = startDate;
-            EndDate = endDate;
+            SetDate(startDate, endDate);
             CreatedAt = DateTime.UtcNow;
             UpdatedAt = DateTime.UtcNow;
         }
@@ -50,6 +49,17 @@ namespace ExamApp.Core.Domain
                 throw new Exception($"Exam with id '{Id}' can not have an empty description.");
             }
             Description = description;
+            UpdatedAt = DateTime.UtcNow;
+        }
+
+        public void SetDate(DateTime startDate, DateTime endDate)
+        {
+            if(startDate > endDate)
+            {
+                throw new Exception("End date must be greater than start date.");
+            }
+            StartDate = startDate;
+            EndDate = endDate;
             UpdatedAt = DateTime.UtcNow;
         }
         public void AddExercise(string name, string question, string answerA, string answerB, string answerC, string answerD)
