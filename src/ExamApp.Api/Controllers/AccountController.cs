@@ -21,12 +21,6 @@ namespace ExamApp.Api.Controllers
         public async Task<IActionResult> Get()
             => Json(await _userService.GetAccountAsync(UserId));
 
-        [HttpGet("exercises")]
-        public async Task<IActionResult> GetExercises()
-        {
-            throw new NotImplementedException();
-        }
-
         [HttpPost("register")]
         public async Task<IActionResult> Post([FromBody]Register command)
         {

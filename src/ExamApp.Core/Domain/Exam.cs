@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace ExamApp.Core.Domain
 {
@@ -12,7 +13,11 @@ namespace ExamApp.Core.Domain
         public DateTime StartDate { get; protected set; }
         public DateTime EndDate { get; protected set; }
         public DateTime UpdatedAt { get; protected set; }
-        public IEnumerable<Exercise> Exercises => _exercises;
+        public IEnumerable<Exercise> Exercises
+        {
+            get { return _exercises; }
+            set { _exercises = new HashSet<Exercise>(value); }
+        }
         protected Exam()
         {
         }
@@ -47,10 +52,27 @@ namespace ExamApp.Core.Domain
             Description = description;
             UpdatedAt = DateTime.UtcNow;
         }
-
-        public void AddExercise(string question, string answerA, string answerB, string answerC, string answerD)
+        public void AddExercise(string name, string question, string answerA, string answerB, string answerC, string answerD)
         {
-            _exercises.Add(new Exercise(this, question, answerA, answerB, answerC, answerD));
+            var exercise = Exercises.SingleOrDefault(x => x.Name == name);
+            if(exercise != null)
+            {
+                throw new Exception($"Exercise with name: '{name}' already exists for exam: {Name}.");
+            }
+            _exercises.Add(Exercise.Create(name, question, answerA, answerB, answerC, answerD));
+            UpdatedAt = DateTime.UtcNow;
+        }
+
+        public void DeleteExercise(string name)
+        {
+            var exercise = Exercises.SingleOrDefault(x => x.Name == name);
+            if(exercise == null)
+            {
+                throw new Exception($"Exercise named: '{name}' for exam: '{Name}' was not found.");
+            }
+            
+            _exercises.Remove(exercise);
+            UpdatedAt = DateTime.UtcNow;            
         }
     }
 }

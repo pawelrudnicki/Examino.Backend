@@ -52,13 +52,6 @@ namespace ExamApp.Infrastructure.Services
             await _examRepository.AddAsync(@exam);
         }
 
-        public async Task AddExerciseAsync(Guid examId, string question, string answerA, string answerB, string answerC, string answerD)
-        {
-            var @exam = await _examRepository.GetOrFailAsync(examId);
-            @exam.AddExercise(question, answerA, answerB, answerC, answerD);
-            await _examRepository.UpdateAsync(@exam);
-        } 
-
         public async Task UpdateAsync(Guid id, string name, string description)
         {
             var @exam = await _examRepository.GetAsync(name);

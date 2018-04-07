@@ -9,10 +9,5 @@ namespace ExamApp.Infrastructure.Commands.Exams
         public string Description { get; set; }
         public DateTime StartDate { get; set; }
         public DateTime EndDate { get; set; }
-        public string Question { get; set; }
-        public string AnswerA { get; set; }
-        public string AnswerB { get; set; }
-        public string AnswerC { get; set; }
-        public string AnswerD { get; set; }
     }
 }

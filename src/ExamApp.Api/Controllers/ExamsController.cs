@@ -27,6 +27,7 @@ namespace ExamApp.Api.Controllers
         [HttpGet("{eventId}")]
         public async Task<IActionResult> Get(Guid eventId)
         {
+
             var @exam = await _examService.GetAsync(eventId);
             if(@exam == null)
             {
@@ -43,8 +44,6 @@ namespace ExamApp.Api.Controllers
             command.ExamId = Guid.NewGuid();
             await _examService.CreateAsync(command.ExamId, command.Name,
                 command.Description, command.StartDate, command.EndDate);
-            await _examService.AddExerciseAsync(command.ExamId, command.Question, 
-                command.AnswerA, command.AnswerB, command.AnswerC, command.AnswerD);
             
             return Created($"/exams/{command.ExamId}", null);
         }

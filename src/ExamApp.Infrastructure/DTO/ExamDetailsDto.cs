@@ -2,8 +2,8 @@ using System.Collections.Generic;
 
 namespace ExamApp.Infrastructure.DTO
 {
-    public class ExamDetailsDto : ExamDto
+    public class ExamDetailsDto
     {
-        public IEnumerable<ExerciseDto> Examples { get; set; }
+        public IEnumerable<ExerciseDto> Exercises { get; set; }
     }
 }
