@@ -17,6 +17,8 @@ using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
 using Newtonsoft.Json;
+using NLog.Extensions.Logging;
+using NLog.Web;
 
 namespace ExamApp.Api
 {
@@ -62,8 +64,14 @@ namespace ExamApp.Api
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IHostingEnvironment env)
+        public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory)
         {
+            // loggerFactory.AddConsole(Configuration.GetSection("Logging"));
+            // loggerFactory.AddDebug();
+            loggerFactory.AddNLog();
+            //app.AddNLogWeb();
+            env.ConfigureNLog("nlog.config");
+            
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
