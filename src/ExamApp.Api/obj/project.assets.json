@@ -2,6 +2,33 @@
   "version": 3,
   "targets": {
     ".NETCoreApp,Version=v2.0": {
+      "Autofac/4.8.0": {
+        "type": "package",
+        "dependencies": {
+          "NETStandard.Library": "1.6.0",
+          "System.ComponentModel": "4.0.1"
+        },
+        "compile": {
+          "lib/netstandard1.1/Autofac.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.1/Autofac.dll": {}
+        }
+      },
+      "Autofac.Extensions.DependencyInjection/4.2.2": {
+        "type": "package",
+        "dependencies": {
+          "Autofac": "4.2.0",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "1.1.0",
+          "NETStandard.Library": "1.6.1"
+        },
+        "compile": {
+          "lib/netstandard1.1/Autofac.Extensions.DependencyInjection.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.1/Autofac.Extensions.DependencyInjection.dll": {}
+        }
+      },
       "AutoMapper/6.2.2": {
         "type": "package",
         "dependencies": {
@@ -4836,6 +4863,30 @@
     }
   },
   "libraries": {
+    "Autofac/4.8.0": {
+      "sha512": "4U+vKK+a/JPF9Qo487NeR2MXG6NBkfbA77RSp4NMiZ5EkyjSsRnNtYp9HvLGBJNrYWNY2mMul9yYyHWipZ5TFw==",
+      "type": "package",
+      "path": "autofac/4.8.0",
+      "files": [
+        "autofac.4.8.0.nupkg.sha512",
+        "autofac.nuspec",
+        "lib/net45/Autofac.dll",
+        "lib/net45/Autofac.xml",
+        "lib/netstandard1.1/Autofac.dll",
+        "lib/netstandard1.1/Autofac.xml"
+      ]
+    },
+    "Autofac.Extensions.DependencyInjection/4.2.2": {
+      "sha512": "nkspkD4qRKCvM1WG6bFLAuEwvbajEhEe7U3Q6XISCBEG6ZamOy52JACXnx3VumZksjPTylavkUZRzBBY7T2R+w==",
+      "type": "package",
+      "path": "autofac.extensions.dependencyinjection/4.2.2",
+      "files": [
+        "autofac.extensions.dependencyinjection.4.2.2.nupkg.sha512",
+        "autofac.extensions.dependencyinjection.nuspec",
+        "lib/netstandard1.1/Autofac.Extensions.DependencyInjection.dll",
+        "lib/netstandard1.1/Autofac.Extensions.DependencyInjection.xml"
+      ]
+    },
     "AutoMapper/6.2.2": {
       "sha512": "eGKcnJdoF5rYMWPUaSPtlWdvua9xw4hnQN5kM/X4AXLGKghrtPIaMv+RYoA3sj0kyZ3X6wZ1Qj67F+u0pCCPaw==",
       "type": "package",
@@ -12710,6 +12761,8 @@
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v2.0": [
       "AutoMapper >= 6.2.2",
+      "Autofac >= 4.8.0",
+      "Autofac.Extensions.DependencyInjection >= 4.2.2",
       "ExamApp.Infrastructure >= 1.0.0",
       "Microsoft.AspNetCore.All >= 2.0.3",
       "Microsoft.AspNetCore.Authentication.JwtBearer >= 2.0.3",
@@ -12764,6 +12817,14 @@
           "AutoMapper": {
             "target": "Package",
             "version": "[6.2.2, )"
+          },
+          "Autofac": {
+            "target": "Package",
+            "version": "[4.8.0, )"
+          },
+          "Autofac.Extensions.DependencyInjection": {
+            "target": "Package",
+            "version": "[4.2.2, )"
           },
           "Microsoft.AspNetCore.All": {
             "target": "Package",

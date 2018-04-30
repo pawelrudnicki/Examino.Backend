@@ -16,8 +16,8 @@ namespace ExamApp.Infrastructure.Repositories
             new Exam(Guid.NewGuid(), "Exam 2", "Exam 2 description",
                 DateTime.UtcNow.AddHours(5), DateTime.UtcNow.AddHours(10)),
         };
+        
     
-
         public async Task<Exam> GetAsync(Guid id)
             => await Task.FromResult(_exams.SingleOrDefault(x => x.Id == id));
 

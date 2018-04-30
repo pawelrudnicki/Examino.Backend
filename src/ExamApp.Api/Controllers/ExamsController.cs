@@ -1,9 +1,12 @@
 using System;
+using System.Collections.Generic;
 using System.Threading.Tasks;
 using ExamApp.Infrastructure.Commands.Exams;
+using ExamApp.Infrastructure.DTO;
 using ExamApp.Infrastructure.Services;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Caching.Memory;
 
 namespace ExamApp.Api.Controllers
 {
@@ -11,15 +14,27 @@ namespace ExamApp.Api.Controllers
     public class ExamsController : ApiControllerBase
     {
         private readonly IExamService _examService;
-        public ExamsController(IExamService examService)
+        private readonly IMemoryCache _cache;
+        public ExamsController(IExamService examService, IMemoryCache cache)
         {
             _examService = examService;
+            _cache = cache;
         }
 
         [HttpGet]
         public async Task<IActionResult> Get(string name)
         {
-            var exams = await _examService.BrowseAsync(name);
+            var exams = _cache.Get<IEnumerable<ExamDto>>("exams");
+            if(exams == null)
+            {
+                Console.WriteLine("Fetching from service.");
+                exams = await _examService.BrowseAsync(name);
+                _cache.Set("exams", exams, TimeSpan.FromMinutes(1));
+            }
+            else
+            {
+                Console.WriteLine("Fetching from cache.");
+            }
 
             return Json(exams);
         }

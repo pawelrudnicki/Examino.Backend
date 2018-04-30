@@ -1,7 +1,7 @@
 {
   "runtimeTarget": {
     "name": ".NETCoreApp,Version=v2.0",
-    "signature": "5b0fe9e9d02f3e959553107cb08648dc892c2e73"
+    "signature": "72cb0226dbea0e0bc58f07babfa542cca4a27179"
   },
   "compilationOptions": {
     "defines": [
@@ -24,6 +24,8 @@
       "ExamApp.Api/1.0.0": {
         "dependencies": {
           "AutoMapper": "6.2.2",
+          "Autofac": "4.8.0",
+          "Autofac.Extensions.DependencyInjection": "4.2.2",
           "ExamApp.Infrastructure": "1.0.0",
           "Microsoft.AspNetCore.All": "2.0.3",
           "Microsoft.AspNetCore.Authentication.JwtBearer": "2.0.3",
@@ -36,6 +38,31 @@
         },
         "compile": {
           "ExamApp.Api.dll": {}
+        }
+      },
+      "Autofac/4.8.0": {
+        "dependencies": {
+          "NETStandard.Library": "2.0.0",
+          "System.ComponentModel": "4.3.0"
+        },
+        "runtime": {
+          "lib/netstandard1.1/Autofac.dll": {}
+        },
+        "compile": {
+          "lib/netstandard1.1/Autofac.dll": {}
+        }
+      },
+      "Autofac.Extensions.DependencyInjection/4.2.2": {
+        "dependencies": {
+          "Autofac": "4.8.0",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "2.0.0",
+          "NETStandard.Library": "2.0.0"
+        },
+        "runtime": {
+          "lib/netstandard1.1/Autofac.Extensions.DependencyInjection.dll": {}
+        },
+        "compile": {
+          "lib/netstandard1.1/Autofac.Extensions.DependencyInjection.dll": {}
         }
       },
       "AutoMapper/6.2.2": {
@@ -4060,6 +4087,20 @@
       "type": "project",
       "serviceable": false,
       "sha512": ""
+    },
+    "Autofac/4.8.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-4U+vKK+a/JPF9Qo487NeR2MXG6NBkfbA77RSp4NMiZ5EkyjSsRnNtYp9HvLGBJNrYWNY2mMul9yYyHWipZ5TFw==",
+      "path": "autofac/4.8.0",
+      "hashPath": "autofac.4.8.0.nupkg.sha512"
+    },
+    "Autofac.Extensions.DependencyInjection/4.2.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-nkspkD4qRKCvM1WG6bFLAuEwvbajEhEe7U3Q6XISCBEG6ZamOy52JACXnx3VumZksjPTylavkUZRzBBY7T2R+w==",
+      "path": "autofac.extensions.dependencyinjection/4.2.2",
+      "hashPath": "autofac.extensions.dependencyinjection.4.2.2.nupkg.sha512"
     },
     "AutoMapper/6.2.2": {
       "type": "package",
