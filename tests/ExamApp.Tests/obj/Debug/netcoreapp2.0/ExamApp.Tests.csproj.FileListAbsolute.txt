@@ -1,0 +1,17 @@
+/home/jarvis/ExamApp/tests/ExamApp.Tests/bin/Debug/netcoreapp2.0/xunit.runner.visualstudio.dotnetcore.testadapter.dll
+/home/jarvis/ExamApp/tests/ExamApp.Tests/bin/Debug/netcoreapp2.0/xunit.runner.reporters.netcoreapp10.dll
+/home/jarvis/ExamApp/tests/ExamApp.Tests/bin/Debug/netcoreapp2.0/xunit.runner.utility.netcoreapp10.dll
+/home/jarvis/ExamApp/tests/ExamApp.Tests/bin/Debug/netcoreapp2.0/ExamApp.Tests.deps.json
+/home/jarvis/ExamApp/tests/ExamApp.Tests/bin/Debug/netcoreapp2.0/ExamApp.Tests.runtimeconfig.json
+/home/jarvis/ExamApp/tests/ExamApp.Tests/bin/Debug/netcoreapp2.0/ExamApp.Tests.runtimeconfig.dev.json
+/home/jarvis/ExamApp/tests/ExamApp.Tests/bin/Debug/netcoreapp2.0/ExamApp.Tests.dll
+/home/jarvis/ExamApp/tests/ExamApp.Tests/bin/Debug/netcoreapp2.0/ExamApp.Tests.pdb
+/home/jarvis/ExamApp/tests/ExamApp.Tests/obj/Debug/netcoreapp2.0/ExamApp.Tests.csproj.CoreCompileInputs.cache
+/home/jarvis/ExamApp/tests/ExamApp.Tests/obj/Debug/netcoreapp2.0/ExamApp.Tests.AssemblyInfoInputs.cache
+/home/jarvis/ExamApp/tests/ExamApp.Tests/obj/Debug/netcoreapp2.0/ExamApp.Tests.AssemblyInfo.cs
+/home/jarvis/ExamApp/tests/ExamApp.Tests/obj/Debug/netcoreapp2.0/ExamApp.Tests.dll
+/home/jarvis/ExamApp/tests/ExamApp.Tests/obj/Debug/netcoreapp2.0/ExamApp.Tests.pdb
+/home/jarvis/ExamApp/tests/ExamApp.Tests/bin/Debug/netcoreapp2.0/ExamApp.Core.dll
+/home/jarvis/ExamApp/tests/ExamApp.Tests/bin/Debug/netcoreapp2.0/ExamApp.Infrastructure.dll
+/home/jarvis/ExamApp/tests/ExamApp.Tests/bin/Debug/netcoreapp2.0/ExamApp.Core.pdb
+/home/jarvis/ExamApp/tests/ExamApp.Tests/bin/Debug/netcoreapp2.0/ExamApp.Infrastructure.pdb
