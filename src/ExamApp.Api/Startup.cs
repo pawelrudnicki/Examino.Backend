@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Autofac;
 using Autofac.Extensions.DependencyInjection;
+using ExamApp.Api.Framework;
 using ExamApp.Core.Repositories;
 using ExamApp.Infrastructure.Mappers;
 using ExamApp.Infrastructure.Repositories;
@@ -89,9 +90,11 @@ namespace ExamApp.Api
             {
                 app.UseDeveloperExceptionPage();
             }
+
+            SeedData(app);
+            app.UseErrorHandler();
             app.UseAuthentication();
             app.UseMvc();
-            SeedData(app);
             appLifetime.ApplicationStopped.Register(() => Container.Dispose());
         }
 

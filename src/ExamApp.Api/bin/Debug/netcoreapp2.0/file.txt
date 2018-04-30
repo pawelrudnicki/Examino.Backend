@@ -46,3 +46,22 @@
 2018-04-30 14:22:10.4287|INFO|Microsoft.AspNetCore.Mvc.Formatters.Json.Internal.JsonResultExecutor|Executing JsonResult, writing value System.Collections.Generic.List`1[ExamApp.Infrastructure.DTO.ExamDto].
 2018-04-30 14:22:10.4852|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action ExamApp.Api.Controllers.ExamsController.Get (ExamApp.Api) in 138.4426ms
 2018-04-30 14:22:10.4891|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 337.8006ms 200 application/json; charset=utf-8
+2018-04-30 20:35:45.9977|INFO|ExamApp.Infrastructure.Services.DataInitializer|Initializing data...
+2018-04-30 20:35:46.0646|INFO|ExamApp.Infrastructure.Services.DataInitializer|Created users: user, admin
+2018-04-30 20:35:46.0707|INFO|ExamApp.Infrastructure.Services.DataInitializer|Created exam: Exam 1
+2018-04-30 20:35:46.0707|INFO|ExamApp.Infrastructure.Services.DataInitializer|Created exam: Exam 2
+2018-04-30 20:35:46.0727|INFO|ExamApp.Infrastructure.Services.DataInitializer|Created exam: Exam 3
+2018-04-30 20:35:46.0727|INFO|ExamApp.Infrastructure.Services.DataInitializer|Created exam: Exam 4
+2018-04-30 20:35:46.0727|INFO|ExamApp.Infrastructure.Services.DataInitializer|Created exam: Exam 5
+2018-04-30 20:35:46.0727|INFO|ExamApp.Infrastructure.Services.DataInitializer|Created exam: Exam 6
+2018-04-30 20:35:46.0727|INFO|ExamApp.Infrastructure.Services.DataInitializer|Created exam: Exam 7
+2018-04-30 20:35:46.0727|INFO|ExamApp.Infrastructure.Services.DataInitializer|Created exam: Exam 8
+2018-04-30 20:35:46.0727|INFO|ExamApp.Infrastructure.Services.DataInitializer|Created exam: Exam 9
+2018-04-30 20:35:52.9972|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 GET http://localhost:5000/exams'  
+2018-04-30 20:35:53.3182|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 329.2357ms 404 
+2018-04-30 20:35:55.6356|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 GET http://localhost:5000/exams  
+2018-04-30 20:35:55.7457|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executing action method ExamApp.Api.Controllers.ExamsController.Get (ExamApp.Api) with arguments () - ModelState is Valid
+2018-04-30 20:35:55.7517|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action ExamApp.Api.Controllers.ExamsController.Get (ExamApp.Api) in 30.3786ms
+2018-04-30 20:35:55.8898|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 254.2496ms 400 application/json
+2018-04-30 20:35:55.9851|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 GET http://localhost:5000/favicon.ico  
+2018-04-30 20:35:55.9851|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 0.5356ms 404 
