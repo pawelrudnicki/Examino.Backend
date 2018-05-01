@@ -11,6 +11,6 @@ namespace ExamApp.Core.Repositories
          Task<User> GetAsync(string email);
          Task AddAsync(User user);
          Task UpdateAsync(User user);
-         Task DeleteAsync(User user);
+         Task DeleteAsync(Guid id);
     }
 }

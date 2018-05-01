@@ -28,8 +28,9 @@ namespace ExamApp.Infrastructure.Repositories
             await Task.CompletedTask;
         }
 
-        public async Task DeleteAsync(User user)
+        public async Task DeleteAsync(Guid id)
         {
+            var user = await GetAsync(id);
             _users.Remove(user);
             await Task.CompletedTask;
         }
