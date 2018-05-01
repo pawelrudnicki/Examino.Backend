@@ -8,6 +8,7 @@ using Autofac.Extensions.DependencyInjection;
 using ExamApp.Api.Framework;
 using ExamApp.Core.Repositories;
 using ExamApp.Infrastructure.Mappers;
+using ExamApp.Infrastructure.Mongo;
 using ExamApp.Infrastructure.Repositories;
 using ExamApp.Infrastructure.Services;
 using ExamApp.Infrastructure.Settings;
@@ -56,6 +57,7 @@ namespace ExamApp.Api
             services.AddAuthorization(x => x.AddPolicy("HasAdminRole", p => p.RequireRole("admin")));
             services.Configure<JwtSettings>(Configuration.GetSection("jwt"));
             services.Configure<AppSettings>(Configuration.GetSection("app"));
+            services.Configure<MongoSettings>(Configuration.GetSection("mongo"));
             services.AddSingleton(AutoMapperConfig.Initialize());
             services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
             .AddJwtBearer(options =>
@@ -90,6 +92,8 @@ namespace ExamApp.Api
             {
                 app.UseDeveloperExceptionPage();
             }
+
+            MongoConfigurator.Initialize();
 
             SeedData(app);
             app.UseErrorHandler();
