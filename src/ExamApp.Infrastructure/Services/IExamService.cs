@@ -10,7 +10,7 @@ namespace ExamApp.Infrastructure.Services
     {
         Task<ExamDetailsDto> GetAsync(Guid id);
         Task<ExamDetailsDto> GetAsync(string name);
-        Task<IEnumerable<ExamDto>> BrowseAsync(string name = null);
+        Task<IEnumerable<ExamDto>> BrowseAsync(string name = "");
         Task CreateAsync(Guid id, string name, string description,
             DateTime startDate, DateTime endDate);
         Task UpdateAsync(Guid id, string name, string description);
