@@ -22,13 +22,13 @@ namespace ExamApp.Core.Domain
         {
         }
 
-        public User(Guid id, string role, string name, string email, string password)
+        public User(Guid id, string email, string password, string name, string role)
         {
             Id = id;
-            SetRole(role);
-            SetName(name);
             SetEmail(email);
             SetPassword(password);
+            SetName(name);
+            SetRole(role);
             CreatedAt = DateTime.UtcNow;
         }
 

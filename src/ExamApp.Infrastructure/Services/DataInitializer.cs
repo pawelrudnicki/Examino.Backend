@@ -10,27 +10,24 @@ namespace ExamApp.Infrastructure.Services
     {
         private readonly IUserService _userService;
         private readonly IExamService _examService;
-        private readonly ILogger<DataInitializer> _logger;
-        public DataInitializer(IUserService userService, IExamService examService,
-            ILogger<DataInitializer> logger)
+        private static readonly Logger Logger = LogManager.GetCurrentClassLogger();
+        public DataInitializer(IUserService userService, IExamService examService)
         {
             _userService = userService;
             _examService = examService;
-            _logger = logger;
         }
         public async Task SeedAsync()
         {
-            _logger.LogInformation("Initializing data...");
+            Logger.Trace("Initializing data...");
             var tasks = new List<Task>();
             for(var i=1; i<=10; i++)
             {
                 var userId = Guid.NewGuid();
                 var username = $"user{i}";
 
-                await _userService.RegisterAsync(userId, $"user{i}@test.com", 
-                    username, "secret", "admin");
+                await _userService.RegisterAsync(userId, $"admin{i}@test.com", username, "secret", "admin");
                 
-                _logger.LogTrace($"Adding user: '{username}'.");
+                Logger.Trace($"Adding user: '{username}'.");
 
                 var examId = Guid.NewGuid();
                 var examName = $"exam{i}";
@@ -40,11 +37,11 @@ namespace ExamApp.Infrastructure.Services
 
                 await _examService.CreateAsync(examId, examName, examDescription, startDate, endDate);
                
-                _logger.LogTrace($"Adding exam: '{examName}'.");
+                Logger.Trace($"Adding exam: '{examName}'.");
             }
 
             await Task.WhenAll(tasks);
-            _logger.LogTrace("Data was initialized.");
+            Logger.Trace("Data was initialized.");
         }
     }
 }

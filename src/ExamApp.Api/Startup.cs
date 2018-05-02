@@ -77,7 +77,6 @@ namespace ExamApp.Api
             // loggerFactory.AddConsole(Configuration.GetSection("Logging"));
             // loggerFactory.AddDebug();
             loggerFactory.AddNLog();
-            //app.AddNLogWeb();
             env.ConfigureNLog("nlog.config");
             
             if (env.IsDevelopment())
@@ -96,8 +95,8 @@ namespace ExamApp.Api
 
         private void SeedData(IApplicationBuilder app)
         {
-            var settings = app.ApplicationServices.GetService<IOptions<AppSettings>>();
-            if(settings.Value.SeedData)
+            var settings = app.ApplicationServices.GetService<AppSettings>();
+            if(settings.SeedData)
             {
                 var dataInitializer = app.ApplicationServices.GetService<IDataInitializer>();
                 dataInitializer.SeedAsync();
