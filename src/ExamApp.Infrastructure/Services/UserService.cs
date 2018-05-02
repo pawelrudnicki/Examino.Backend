@@ -27,15 +27,14 @@ namespace ExamApp.Infrastructure.Services
             return _mapper.Map<AccountDto>(user);
         }
 
-        public async Task RegisterAsync(Guid userId, string email, 
-            string name, string password, string role = "user")
+        public async Task RegisterAsync(Guid userId, string email, string name, string password, string role)
         {
             var user = await _userRepository.GetAsync(email);
             if(user != null)
             {
                 throw new Exception($"User with email: '{email}' already exists.");
             }
-            user = new User(userId, role, name, email, password);
+            user = new User(userId, email, password, name, role);
             await _userRepository.AddAsync(user);
         }
 

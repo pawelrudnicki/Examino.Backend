@@ -1,0 +1,17 @@
+2018-05-01 13:47:49.8445|INFO|ExamApp.Infrastructure.Services.DataInitializer|Initializing data...
+2018-05-01 13:47:49.9015|INFO|ExamApp.Infrastructure.Services.DataInitializer|Created users: user, admin
+2018-05-01 13:47:49.9081|INFO|ExamApp.Infrastructure.Services.DataInitializer|Created exam: Exam 1
+2018-05-01 13:47:49.9081|INFO|ExamApp.Infrastructure.Services.DataInitializer|Created exam: Exam 2
+2018-05-01 13:47:49.9093|INFO|ExamApp.Infrastructure.Services.DataInitializer|Created exam: Exam 3
+2018-05-01 13:47:49.9093|INFO|ExamApp.Infrastructure.Services.DataInitializer|Created exam: Exam 4
+2018-05-01 13:47:49.9093|INFO|ExamApp.Infrastructure.Services.DataInitializer|Created exam: Exam 5
+2018-05-01 13:47:49.9093|INFO|ExamApp.Infrastructure.Services.DataInitializer|Created exam: Exam 6
+2018-05-01 13:47:49.9093|INFO|ExamApp.Infrastructure.Services.DataInitializer|Created exam: Exam 7
+2018-05-01 13:47:49.9093|INFO|ExamApp.Infrastructure.Services.DataInitializer|Created exam: Exam 8
+2018-05-01 13:47:49.9093|INFO|ExamApp.Infrastructure.Services.DataInitializer|Created exam: Exam 9
+2018-05-01 13:47:50.1523|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 GET http://localhost/exams  
+2018-05-01 13:47:50.3730|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executing action method ExamApp.Api.Controllers.ExamsController.Get (ExamApp.Api) with arguments () - ModelState is Valid
+2018-05-01 13:47:50.3792|INFO|ExamApp.Infrastructure.Services.ExamService|Fetching exams
+2018-05-01 13:47:50.4382|INFO|Microsoft.AspNetCore.Mvc.Formatters.Json.Internal.JsonResultExecutor|Executing JsonResult, writing value System.Collections.Generic.List`1[ExamApp.Infrastructure.DTO.ExamDto].
+2018-05-01 13:47:50.4787|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action ExamApp.Api.Controllers.ExamsController.Get (ExamApp.Api) in 133.498ms
+2018-05-01 13:47:50.4936|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 349.3561ms 200 application/json; charset=utf-8

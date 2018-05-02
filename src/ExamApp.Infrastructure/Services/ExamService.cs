@@ -6,11 +6,14 @@ using ExamApp.Core.Domain;
 using ExamApp.Core.Repositories;
 using ExamApp.Infrastructure.DTO;
 using ExamApp.Infrastructure.Extensions;
+using Microsoft.Extensions.Logging;
+using NLog;
 
 namespace ExamApp.Infrastructure.Services
 {
     public class ExamService : IExamService
     {
+        private static readonly Logger Logger = LogManager.GetCurrentClassLogger();
         private readonly IExamRepository _examRepository;
         private readonly IMapper _mapper;
 
@@ -36,6 +39,7 @@ namespace ExamApp.Infrastructure.Services
 
         public async Task<IEnumerable<ExamDto>> BrowseAsync(string name = null)
         {
+            Logger.Info("Fetching exams");
             var exams = await _examRepository.BrowseAsync(name);
 
             return _mapper.Map<IEnumerable<ExamDto>>(exams);

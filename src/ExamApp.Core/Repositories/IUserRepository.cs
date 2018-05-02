@@ -5,12 +5,12 @@ using ExamApp.Core.Domain;
 
 namespace ExamApp.Core.Repositories
 {
-    public interface IUserRepository
+    public interface IUserRepository : IRepository
     {
          Task<User> GetAsync(Guid id);
          Task<User> GetAsync(string email);
          Task AddAsync(User user);
          Task UpdateAsync(User user);
-         Task DeleteAsync(User user);
+         Task DeleteAsync(Guid id);
     }
 }

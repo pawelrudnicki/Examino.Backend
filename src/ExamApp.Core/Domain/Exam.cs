@@ -13,11 +13,7 @@ namespace ExamApp.Core.Domain
         public DateTime StartDate { get; protected set; }
         public DateTime EndDate { get; protected set; }
         public DateTime UpdatedAt { get; protected set; }
-        public IEnumerable<Exercise> Exercises
-        {
-            get { return _exercises; }
-            set { _exercises = new HashSet<Exercise>(value); }
-        }
+        public IEnumerable<Exercise> Exercises => _exercises;
         protected Exam()
         {
         }
@@ -27,8 +23,7 @@ namespace ExamApp.Core.Domain
             Id = id;
             SetName(name);
             SetDescription(description);
-            StartDate = startDate;
-            EndDate = endDate;
+            SetDates(startDate, endDate);
             CreatedAt = DateTime.UtcNow;
             UpdatedAt = DateTime.UtcNow;
         }
@@ -39,6 +34,7 @@ namespace ExamApp.Core.Domain
             {
                 throw new Exception($"Exam with id '{Id}' can not have an empty name.");
             }
+
             Name = name;
             UpdatedAt = DateTime.UtcNow;
         }
@@ -49,7 +45,23 @@ namespace ExamApp.Core.Domain
             {
                 throw new Exception($"Exam with id '{Id}' can not have an empty description.");
             }
+
             Description = description;
+            UpdatedAt = DateTime.UtcNow;
+        }
+
+        public void SetDates(DateTime startDate, DateTime endDate)
+        {
+            if(startDate >= endDate)
+            {
+                throw new Exception("End date must be greater than start date.");
+            }
+            if(startDate == null || endDate == null)
+            {
+                throw new Exception("Date can not be empty.");
+            }
+            StartDate = startDate;
+            EndDate = endDate;
             UpdatedAt = DateTime.UtcNow;
         }
         public void AddExercise(string name, string question, string answerA, string answerB, string answerC, string answerD)
