@@ -15,6 +15,7 @@ namespace ExamApp.Infrastructure.Mongo
                 return;
             }
 
+            _initialized = true;
         }
 
         private static void RegisterConventions()

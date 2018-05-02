@@ -4,7 +4,7 @@ using ExamApp.Infrastructure.DTO;
 
 namespace ExamApp.Infrastructure.Services
 {
-    public interface IUserService
+    public interface IUserService : IService
     {
         Task<AccountDto> GetAccountAsync(Guid userId);
         Task RegisterAsync(Guid userId, string email,

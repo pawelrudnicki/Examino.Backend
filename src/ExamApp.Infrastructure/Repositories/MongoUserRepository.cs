@@ -8,7 +8,7 @@ using MongoDB.Driver.Linq;
 
 namespace ExamApp.Infrastructure.Repositories
 {
-    public class MongoUserRepository : IUserRepository
+    public class MongoUserRepository : IUserRepository, IMongoRepository
     {
         private readonly IMongoDatabase _database;
         public MongoUserRepository(IMongoDatabase database)

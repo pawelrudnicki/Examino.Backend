@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Reflection;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,6 +24,8 @@ using Microsoft.IdentityModel.Tokens;
 using Newtonsoft.Json;
 using NLog.Extensions.Logging;
 using NLog.Web;
+using MongoDB.Driver;
+using ExamApp.Infrastructure.IoC;
 
 namespace ExamApp.Api
 {
@@ -46,19 +49,8 @@ namespace ExamApp.Api
             //Add framework services.
             services.AddMvc()
                 .AddJsonOptions(x => x.SerializerSettings.Formatting = Formatting.Indented);
-            services.AddMemoryCache();
-            //services.AddScoped<IExamRepository, ExamRepository>();
-            services.AddScoped<IUserRepository, UserRepository>();
-            services.AddScoped<IExamService, ExamService>();
-            services.AddScoped<IExamExerciseService, ExamExerciseService>();
-            services.AddScoped<IUserService, UserService>();
-            services.AddScoped<IDataInitializer, DataInitializer>();
-            services.AddSingleton<IJwtHandler, JwtHandler>(); 
+            services.AddMemoryCache(); 
             services.AddAuthorization(x => x.AddPolicy("HasAdminRole", p => p.RequireRole("admin")));
-            services.Configure<JwtSettings>(Configuration.GetSection("jwt"));
-            services.Configure<AppSettings>(Configuration.GetSection("app"));
-            services.Configure<MongoSettings>(Configuration.GetSection("mongo"));
-            services.AddSingleton(AutoMapperConfig.Initialize());
             services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
             .AddJwtBearer(options =>
             {
@@ -72,7 +64,7 @@ namespace ExamApp.Api
 
             var builder = new ContainerBuilder();
             builder.Populate(services);
-            builder.RegisterType<ExamRepository>().As<IExamRepository>().InstancePerLifetimeScope();
+            builder.RegisterModule(new ContainerModule(Configuration));
             Container = builder.Build();
 
             return new AutofacServiceProvider(Container);

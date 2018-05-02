@@ -65,3 +65,87 @@
 2018-04-30 20:35:55.8898|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 254.2496ms 400 application/json
 2018-04-30 20:35:55.9851|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 GET http://localhost:5000/favicon.ico  
 2018-04-30 20:35:55.9851|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 0.5356ms 404 
+2018-05-02 10:17:43.3670|FATAL|Microsoft.AspNetCore.Hosting.Internal.WebHost|Application startup exception
+2018-05-02 10:19:05.5795|FATAL|Microsoft.AspNetCore.Hosting.Internal.WebHost|Application startup exception
+2018-05-02 10:20:30.3655|FATAL|Microsoft.AspNetCore.Hosting.Internal.WebHost|Application startup exception
+2018-05-02 11:50:39.0899|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 GET http://localhost:5000/exams  
+2018-05-02 11:50:39.5300|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executing action method ExamApp.Api.Controllers.ExamsController.Get (ExamApp.Api) with arguments () - ModelState is Valid
+2018-05-02 11:50:39.5384|INFO|ExamApp.Infrastructure.Services.ExamService|Fetching exams
+2018-05-02 11:50:39.5919|INFO|Microsoft.AspNetCore.Mvc.Formatters.Json.Internal.JsonResultExecutor|Executing JsonResult, writing value System.Collections.Generic.List`1[ExamApp.Infrastructure.DTO.ExamDto].
+2018-05-02 11:50:39.6647|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action ExamApp.Api.Controllers.ExamsController.Get (ExamApp.Api) in 159.995ms
+2018-05-02 11:50:39.6692|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 589.3167ms 200 application/json; charset=utf-8
+2018-05-02 11:50:39.7834|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 GET http://localhost:5000/favicon.ico  
+2018-05-02 11:50:39.7870|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 3.6712ms 404 
+2018-05-02 11:50:56.2726|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 GET http://localhost:5000/users  
+2018-05-02 11:50:56.2726|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 1.1326ms 404 
+2018-05-02 11:51:07.8093|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 GET http://localhost:5000/exams  
+2018-05-02 11:51:07.8105|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executing action method ExamApp.Api.Controllers.ExamsController.Get (ExamApp.Api) with arguments () - ModelState is Valid
+2018-05-02 11:51:07.8105|INFO|Microsoft.AspNetCore.Mvc.Formatters.Json.Internal.JsonResultExecutor|Executing JsonResult, writing value System.Collections.Generic.List`1[ExamApp.Infrastructure.DTO.ExamDto].
+2018-05-02 11:51:07.8105|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action ExamApp.Api.Controllers.ExamsController.Get (ExamApp.Api) in 2.7364ms
+2018-05-02 11:51:07.8105|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 4.0805ms 200 application/json; charset=utf-8
+2018-05-02 11:55:43.8311|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 GET http://localhost:5000/exams  
+2018-05-02 11:55:44.0777|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executing action method ExamApp.Api.Controllers.ExamsController.Get (ExamApp.Api) with arguments () - ModelState is Valid
+2018-05-02 11:55:44.0861|INFO|ExamApp.Infrastructure.Services.ExamService|Fetching exams
+2018-05-02 11:55:44.1393|INFO|Microsoft.AspNetCore.Mvc.Formatters.Json.Internal.JsonResultExecutor|Executing JsonResult, writing value System.Collections.Generic.List`1[ExamApp.Infrastructure.DTO.ExamDto].
+2018-05-02 11:55:44.1975|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action ExamApp.Api.Controllers.ExamsController.Get (ExamApp.Api) in 145.3454ms
+2018-05-02 11:55:44.2022|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 380.7954ms 200 application/json; charset=utf-8
+2018-05-02 11:55:51.4138|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 GET http://localhost:5000/exams  
+2018-05-02 11:55:51.4138|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executing action method ExamApp.Api.Controllers.ExamsController.Get (ExamApp.Api) with arguments () - ModelState is Valid
+2018-05-02 11:55:51.4138|INFO|Microsoft.AspNetCore.Mvc.Formatters.Json.Internal.JsonResultExecutor|Executing JsonResult, writing value System.Collections.Generic.List`1[ExamApp.Infrastructure.DTO.ExamDto].
+2018-05-02 11:55:51.4181|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action ExamApp.Api.Controllers.ExamsController.Get (ExamApp.Api) in 3.3097ms
+2018-05-02 11:55:51.4181|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 5.7424ms 200 application/json; charset=utf-8
+2018-05-02 11:55:52.1932|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 GET http://localhost:5000/exams  
+2018-05-02 11:55:52.1941|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executing action method ExamApp.Api.Controllers.ExamsController.Get (ExamApp.Api) with arguments () - ModelState is Valid
+2018-05-02 11:55:52.1941|INFO|Microsoft.AspNetCore.Mvc.Formatters.Json.Internal.JsonResultExecutor|Executing JsonResult, writing value System.Collections.Generic.List`1[ExamApp.Infrastructure.DTO.ExamDto].
+2018-05-02 11:55:52.1941|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action ExamApp.Api.Controllers.ExamsController.Get (ExamApp.Api) in 0.9452ms
+2018-05-02 11:55:52.1941|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 2.1554ms 200 application/json; charset=utf-8
+2018-05-02 11:55:52.9435|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 GET http://localhost:5000/exams  
+2018-05-02 11:55:52.9435|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executing action method ExamApp.Api.Controllers.ExamsController.Get (ExamApp.Api) with arguments () - ModelState is Valid
+2018-05-02 11:55:52.9435|INFO|Microsoft.AspNetCore.Mvc.Formatters.Json.Internal.JsonResultExecutor|Executing JsonResult, writing value System.Collections.Generic.List`1[ExamApp.Infrastructure.DTO.ExamDto].
+2018-05-02 11:55:52.9435|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action ExamApp.Api.Controllers.ExamsController.Get (ExamApp.Api) in 1.0004ms
+2018-05-02 11:55:52.9463|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 2.8131ms 200 application/json; charset=utf-8
+2018-05-02 11:55:54.1309|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 GET http://localhost:5000/exams  
+2018-05-02 11:55:54.1309|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executing action method ExamApp.Api.Controllers.ExamsController.Get (ExamApp.Api) with arguments () - ModelState is Valid
+2018-05-02 11:55:54.1309|INFO|Microsoft.AspNetCore.Mvc.Formatters.Json.Internal.JsonResultExecutor|Executing JsonResult, writing value System.Collections.Generic.List`1[ExamApp.Infrastructure.DTO.ExamDto].
+2018-05-02 11:55:54.1309|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action ExamApp.Api.Controllers.ExamsController.Get (ExamApp.Api) in 0.6533ms
+2018-05-02 11:55:54.1309|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 1.5009ms 200 application/json; charset=utf-8
+2018-05-02 11:57:49.6320|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 GET http://localhost:5000/exams  
+2018-05-02 11:57:49.8882|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executing action method ExamApp.Api.Controllers.ExamsController.Get (ExamApp.Api) with arguments () - ModelState is Valid
+2018-05-02 11:57:49.8965|INFO|ExamApp.Infrastructure.Services.ExamService|Fetching exams
+2018-05-02 11:57:49.9519|INFO|Microsoft.AspNetCore.Mvc.Formatters.Json.Internal.JsonResultExecutor|Executing JsonResult, writing value System.Collections.Generic.List`1[ExamApp.Infrastructure.DTO.ExamDto].
+2018-05-02 11:57:50.0104|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action ExamApp.Api.Controllers.ExamsController.Get (ExamApp.Api) in 149.7512ms
+2018-05-02 11:57:50.0151|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 393.0771ms 200 application/json; charset=utf-8
+2018-05-02 12:01:53.8592|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 GET http://localhost:5000/exams  
+2018-05-02 12:01:54.1099|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executing action method ExamApp.Api.Controllers.ExamsController.Get (ExamApp.Api) with arguments () - ModelState is Valid
+2018-05-02 12:01:54.1184|INFO|ExamApp.Infrastructure.Services.ExamService|Fetching exams
+2018-05-02 12:01:54.1730|INFO|Microsoft.AspNetCore.Mvc.Formatters.Json.Internal.JsonResultExecutor|Executing JsonResult, writing value System.Collections.Generic.List`1[ExamApp.Infrastructure.DTO.ExamDto].
+2018-05-02 12:01:54.2288|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action ExamApp.Api.Controllers.ExamsController.Get (ExamApp.Api) in 145.6234ms
+2018-05-02 12:01:54.2334|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 384.146ms 200 application/json; charset=utf-8
+2018-05-02 12:01:55.6706|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 GET http://localhost:5000/exams  
+2018-05-02 12:01:55.6706|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executing action method ExamApp.Api.Controllers.ExamsController.Get (ExamApp.Api) with arguments () - ModelState is Valid
+2018-05-02 12:01:55.6706|INFO|Microsoft.AspNetCore.Mvc.Formatters.Json.Internal.JsonResultExecutor|Executing JsonResult, writing value System.Collections.Generic.List`1[ExamApp.Infrastructure.DTO.ExamDto].
+2018-05-02 12:01:55.6744|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action ExamApp.Api.Controllers.ExamsController.Get (ExamApp.Api) in 2.0993ms
+2018-05-02 12:01:55.6744|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 4.2788ms 200 application/json; charset=utf-8
+2018-05-02 12:02:23.6683|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 GET http://localhost:5000/exams  
+2018-05-02 12:02:23.6699|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executing action method ExamApp.Api.Controllers.ExamsController.Get (ExamApp.Api) with arguments () - ModelState is Valid
+2018-05-02 12:02:23.6699|INFO|Microsoft.AspNetCore.Mvc.Formatters.Json.Internal.JsonResultExecutor|Executing JsonResult, writing value System.Collections.Generic.List`1[ExamApp.Infrastructure.DTO.ExamDto].
+2018-05-02 12:02:23.6699|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action ExamApp.Api.Controllers.ExamsController.Get (ExamApp.Api) in 1.0738ms
+2018-05-02 12:02:23.6699|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 2.9897ms 200 application/json; charset=utf-8
+2018-05-02 12:03:36.8050|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 GET http://localhost:5000/users  
+2018-05-02 12:03:36.9873|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 192.4335ms 404 
+2018-05-02 12:09:02.6369|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 GET http://localhost:5000/exams  
+2018-05-02 12:09:02.8743|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executing action method ExamApp.Api.Controllers.ExamsController.Get (ExamApp.Api) with arguments () - ModelState is Valid
+2018-05-02 12:09:02.8839|INFO|ExamApp.Infrastructure.Services.ExamService|Fetching exams
+2018-05-02 12:09:02.9366|INFO|Microsoft.AspNetCore.Mvc.Formatters.Json.Internal.JsonResultExecutor|Executing JsonResult, writing value System.Collections.Generic.List`1[ExamApp.Infrastructure.DTO.ExamDto].
+2018-05-02 12:09:02.9935|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action ExamApp.Api.Controllers.ExamsController.Get (ExamApp.Api) in 145.9186ms
+2018-05-02 12:09:02.9973|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 371.1879ms 200 application/json; charset=utf-8
+2018-05-02 12:09:05.8943|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 GET http://localhost:5000/account  
+2018-05-02 12:09:05.9167|INFO|Microsoft.AspNetCore.Authorization.DefaultAuthorizationService|Authorization failed for user: (null).
+2018-05-02 12:09:05.9167|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Authorization failed for the request at filter 'Microsoft.AspNetCore.Mvc.Authorization.AuthorizeFilter'.
+2018-05-02 12:09:05.9194|INFO|Microsoft.AspNetCore.Mvc.ChallengeResult|Executing ChallengeResult with authentication schemes ().
+2018-05-02 12:09:05.9372|INFO|Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler|AuthenticationScheme: Bearer was challenged.
+2018-05-02 12:09:05.9372|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action ExamApp.Api.Controllers.AccountController.Get (ExamApp.Api) in 32.488ms
+2018-05-02 12:09:05.9388|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 44.581ms 401 
+2018-05-02 12:12:41.9140|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 POST http://localhost:5000/account/register application/json 103
+2018-05-02 12:12:42.1450|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action ExamApp.Api.Controllers.AccountController.Post (ExamApp.Api) in 24.1517ms
+2018-05-02 12:12:42.2007|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 295.9569ms 500 application/json

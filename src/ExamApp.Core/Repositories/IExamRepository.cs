@@ -5,7 +5,7 @@ using ExamApp.Core.Domain;
 
 namespace ExamApp.Core.Repositories
 {
-    public interface IExamRepository
+    public interface IExamRepository : IRepository
     {
         Task<Exam> GetAsync(Guid id);
         Task<Exam> GetAsync(string name);

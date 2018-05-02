@@ -6,7 +6,7 @@ using ExamApp.Infrastructure.DTO;
 
 namespace ExamApp.Infrastructure.Services
 {
-    public interface IExamService
+    public interface IExamService : IService
     {
         Task<ExamDetailsDto> GetAsync(Guid id);
         Task<ExamDetailsDto> GetAsync(string name);
