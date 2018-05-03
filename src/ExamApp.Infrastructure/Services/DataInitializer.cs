@@ -10,11 +10,14 @@ namespace ExamApp.Infrastructure.Services
     {
         private readonly IUserService _userService;
         private readonly IExamService _examService;
+        private readonly IExamExerciseService _exerciseService;
         private static readonly Logger Logger = LogManager.GetCurrentClassLogger();
-        public DataInitializer(IUserService userService, IExamService examService)
+        public DataInitializer(IUserService userService, IExamService examService, 
+            IExamExerciseService exerciseService)
         {
             _userService = userService;
             _examService = examService;
+            _exerciseService = exerciseService;
         }
         public async Task SeedAsync()
         {
@@ -22,14 +25,14 @@ namespace ExamApp.Infrastructure.Services
             var tasks = new List<Task>();
             for(var i=1; i<=10; i++)
             {
-                var userId = Guid.NewGuid();
+                Guid userId = Guid.NewGuid();
                 var username = $"user{i}";
 
                 await _userService.RegisterAsync(userId, $"admin{i}@test.com", username, "secret", "admin");
                 
                 Logger.Trace($"Adding user: '{username}'.");
 
-                var examId = Guid.NewGuid();
+                Guid examId = Guid.NewGuid();
                 var examName = $"exam{i}";
                 var examDescription = $"{examName} description.";
                 var startDate = DateTime.UtcNow.AddHours(3);
@@ -38,6 +41,11 @@ namespace ExamApp.Infrastructure.Services
                 await _examService.CreateAsync(examId, examName, examDescription, startDate, endDate);
                
                 Logger.Trace($"Adding exam: '{examName}'.");
+
+                await _exerciseService.AddAsync(examId, "NameOfExercise", "Question", 
+                    "answerA", "answerB", "answerC", "answerD");
+
+                Logger.Trace($"Adding exercise for '{examName}'.");
             }
 
             await Task.WhenAll(tasks);

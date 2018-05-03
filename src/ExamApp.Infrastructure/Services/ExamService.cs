@@ -25,16 +25,16 @@ namespace ExamApp.Infrastructure.Services
 
         public async Task<ExamDetailsDto> GetAsync(Guid id)
         {
-            var @exam = await _examRepository.GetAsync(id);
+            var exam = await _examRepository.GetOrFailAsync(id);
 
-            return _mapper.Map<ExamDetailsDto>(@exam);
+            return _mapper.Map<ExamDetailsDto>(exam);
         }
 
         public async Task<ExamDetailsDto> GetAsync(string name)
         {
-            var @exam = await _examRepository.GetAsync(name);
+            var exam = await _examRepository.GetAsync(name);
 
-            return _mapper.Map<ExamDetailsDto>(@exam);
+            return _mapper.Map<ExamDetailsDto>(exam);
         }
 
         public async Task<IEnumerable<ExamDto>> BrowseAsync(string name = null)
@@ -47,32 +47,32 @@ namespace ExamApp.Infrastructure.Services
 
         public async Task CreateAsync(Guid id, string name, string description, DateTime startDate, DateTime endDate)
         {
-            var @exam = await _examRepository.GetAsync(name);
-            if(@exam != null)
+            var exam = await _examRepository.GetAsync(name);
+            if(exam != null)
             {
                 throw new Exception($"Exam named: '{name}' already exists.");
             }
-            @exam = new Exam(id, name, description, startDate, endDate);
-            await _examRepository.AddAsync(@exam);
+            exam = new Exam(id, name, description, startDate, endDate);
+            await _examRepository.AddAsync(exam);
         }
 
         public async Task UpdateAsync(Guid id, string name, string description)
         {
-            var @exam = await _examRepository.GetAsync(name);
-            if(@exam != null)
+            var exam = await _examRepository.GetAsync(name);
+            if(exam != null)
             {
                 throw new Exception($"Exam named: '{name}' already exists.");
             }
-            @exam = await _examRepository.GetOrFailAsync(id);
-            @exam.SetName(name);
-            @exam.SetDescription(description);
-            await _examRepository.UpdateAsync(@exam);
+            exam = await _examRepository.GetOrFailAsync(id);
+            exam.SetName(name);
+            exam.SetDescription(description);
+            await _examRepository.UpdateAsync(exam);
         } 
 
         public async Task DeleteAsync(Guid id)
         {
-            var @exam = await _examRepository.GetOrFailAsync(id);
-            await _examRepository.DeleteAsync(@exam);
+            var exam = await _examRepository.GetOrFailAsync(id);
+            await _examRepository.DeleteAsync(exam);
         }
     }
 }

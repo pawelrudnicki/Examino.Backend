@@ -13,7 +13,11 @@ namespace ExamApp.Core.Domain
         public DateTime StartDate { get; protected set; }
         public DateTime EndDate { get; protected set; }
         public DateTime UpdatedAt { get; protected set; }
-        public IEnumerable<Exercise> Exercises => _exercises;
+        public IEnumerable<Exercise> Exercises
+        {
+            get { return _exercises; }
+            set { _exercises = new HashSet<Exercise>(value); }
+        }
         protected Exam()
         {
         }
