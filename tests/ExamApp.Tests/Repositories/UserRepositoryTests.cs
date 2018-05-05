@@ -13,7 +13,7 @@ namespace ExamApp.Tests.Repositories
         public async Task when_adding_new_user_it_should_be_added_correctly_to_the_list()
         {
             //Arrange
-            var user = new User(Guid.NewGuid(), "user", "test", "test@test.com", "secret");
+            var user = new User(Guid.NewGuid(), "user@email.com", "secret", "user", "user");
             IUserRepository repository = new UserRepository();
 
             //Act
