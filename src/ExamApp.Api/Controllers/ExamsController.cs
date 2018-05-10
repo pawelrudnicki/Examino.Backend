@@ -43,13 +43,13 @@ namespace ExamApp.Api.Controllers
         public async Task<IActionResult> Get(Guid eventId)
         {
 
-            var @exam = await _examService.GetAsync(eventId);
-            if(@exam == null)
+            var exam = await _examService.GetAsync(eventId);
+            if(exam == null)
             {
                 return NotFound();
             }
 
-            return Json(@exam);
+            return Json(exam);
         }
 
         [HttpPost]

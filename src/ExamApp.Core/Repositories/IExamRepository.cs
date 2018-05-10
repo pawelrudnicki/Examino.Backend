@@ -10,8 +10,8 @@ namespace ExamApp.Core.Repositories
         Task<Exam> GetAsync(Guid id);
         Task<Exam> GetAsync(string name);
         Task<IEnumerable<Exam>> BrowseAsync(string name = "");
-        Task AddAsync(Exam @exam);
-        Task UpdateAsync(Exam @exam);
-        Task DeleteAsync(Exam @exam);
+        Task AddAsync(Exam exam);
+        Task UpdateAsync(Exam exam);
+        Task DeleteAsync(Exam exam);
     }
 }

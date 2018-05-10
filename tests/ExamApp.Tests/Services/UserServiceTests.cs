@@ -25,7 +25,7 @@ namespace ExamApp.Tests.Services
 
             //Act
             await userService.RegisterAsync(Guid.NewGuid(), "test@test.com", "test",
-                "secret");
+                "secret", "user");
 
             //Assert
             userRepositoryMock.Verify(x => x.AddAsync(It.IsAny<User>()), Times.Once());
@@ -35,7 +35,7 @@ namespace ExamApp.Tests.Services
         public async Task when_invoking_get_async_it_should_invoke_get_async_on_user_repository()
         {
             //Arrange
-            var user = new User(Guid.NewGuid(), "user", "test", "test@test.com", "secret");
+            var user = new User(Guid.NewGuid(), "user@email.com", "secret", "user", "user");
             var accountDto = new AccountDto
             {
                 Id = user.Id,

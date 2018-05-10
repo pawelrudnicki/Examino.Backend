@@ -15,3 +15,4 @@
 2018-05-01 13:47:50.4382|INFO|Microsoft.AspNetCore.Mvc.Formatters.Json.Internal.JsonResultExecutor|Executing JsonResult, writing value System.Collections.Generic.List`1[ExamApp.Infrastructure.DTO.ExamDto].
 2018-05-01 13:47:50.4787|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action ExamApp.Api.Controllers.ExamsController.Get (ExamApp.Api) in 133.498ms
 2018-05-01 13:47:50.4936|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 349.3561ms 200 application/json; charset=utf-8
+2018-05-05 12:28:47.8618|FATAL|Microsoft.AspNetCore.Hosting.Internal.WebHost|Application startup exception

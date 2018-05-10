@@ -1,25 +1,24 @@
 using System;
+using System.Collections.Generic;
 using System.Threading.Tasks;
 using ExamApp.Infrastructure.Commands.Users;
+using ExamApp.Infrastructure.DTO;
 using ExamApp.Infrastructure.Services;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Caching.Memory;
 
 namespace ExamApp.Api.Controllers
 {
     public class AccountController : ApiControllerBase
     {
         private readonly IUserService _userService;
-
-        public AccountController(IUserService userService)
+        private readonly IMemoryCache _cache;
+        public AccountController(IUserService userService, IMemoryCache cache)
         {
             _userService = userService;
+            _cache = cache;
         }
-
-        [HttpGet]
-        [Authorize]
-        public async Task<IActionResult> Get()
-            => Json(await _userService.GetAccountAsync(UserId));
 
         [HttpPost("register")]
         public async Task<IActionResult> Post([FromBody]Register command)
@@ -32,6 +31,6 @@ namespace ExamApp.Api.Controllers
 
         [HttpPost("login")]
         public async Task<IActionResult> Post([FromBody]Login command)
-            => Json(await _userService.LoginAsync(command.Email, command.Password));
+        => Json(await _userService.LoginAsync(command.Email, command.Password));
     }
 }

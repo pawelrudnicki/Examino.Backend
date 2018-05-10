@@ -30,21 +30,21 @@ namespace ExamApp.Infrastructure.Repositories
             return await Task.FromResult(exams);
         }
 
-        public async Task AddAsync(Exam @exam)
+        public async Task AddAsync(Exam exam)
         {
-            _exams.Add(@exam);
+            _exams.Add(exam);
             await Task.CompletedTask;
         }
 
-        public async Task UpdateAsync(Exam @exam)
+        public async Task UpdateAsync(Exam exam)
         {
             await Task.CompletedTask;
             //in future, you have to add here some SQL command.
         }
 
-        public async Task DeleteAsync(Exam @exam)
+        public async Task DeleteAsync(Exam exam)
         {
-            _exams.Remove(@exam);
+            _exams.Remove(exam);
             await Task.CompletedTask;
         }
     }
