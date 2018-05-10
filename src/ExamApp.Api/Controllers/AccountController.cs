@@ -20,36 +20,6 @@ namespace ExamApp.Api.Controllers
             _cache = cache;
         }
 
-        [HttpGet]
-        public async Task<IActionResult> Get(string name)
-        {
-            var users = _cache.Get<IEnumerable<AccountDto>>("users");
-            if(users == null)
-            {
-                Console.WriteLine("Fetching from service.");
-                users = await _userService.BrowseAsync();
-                _cache.Set("users", users, TimeSpan.FromMinutes(1));
-            }
-            else
-            {
-                Console.WriteLine("Fetching from cache.");
-            }
-
-            return Json(users);
-        }
-
-        [HttpGet("{UserId}")]
-        public async Task<IActionResult> Get(Guid UserId)
-        {
-            var user = await _userService.GetAccountAsync(UserId);
-            if(user == null)
-            {
-                return NotFound();
-            }
-
-            return Json(user);
-        }
-
         [HttpPost("register")]
         public async Task<IActionResult> Post([FromBody]Register command)
         {
@@ -61,6 +31,6 @@ namespace ExamApp.Api.Controllers
 
         [HttpPost("login")]
         public async Task<IActionResult> Post([FromBody]Login command)
-            => Json(await _userService.LoginAsync(command.Email, command.Password));
+        => Json(await _userService.LoginAsync(command.Email, command.Password));
     }
 }
