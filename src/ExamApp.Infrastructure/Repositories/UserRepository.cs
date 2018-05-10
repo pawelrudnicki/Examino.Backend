@@ -17,6 +17,18 @@ namespace ExamApp.Infrastructure.Repositories
             => await Task.FromResult(_users.SingleOrDefault(x => 
                 x.Email.ToLowerInvariant() == email.ToLowerInvariant()));
 
+        public async Task<IEnumerable<User>> GetAllAsync(string name = "")
+        {
+            var users = _users.AsEnumerable();
+            if(!string.IsNullOrWhiteSpace(name))
+            {
+                users = users.Where(x => x.Name.ToLowerInvariant()
+                    .Contains(name.ToLowerInvariant()));
+            }
+
+            return await Task.FromResult(users);
+        }
+
         public async Task AddAsync(User user)
         {
             _users.Add(user);

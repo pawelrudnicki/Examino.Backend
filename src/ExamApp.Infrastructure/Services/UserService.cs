@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using System.Threading.Tasks;
 using AutoMapper;
 using ExamApp.Core.Domain;
@@ -25,6 +26,13 @@ namespace ExamApp.Infrastructure.Services
             var user = await _userRepository.GetOrFailAsync(userId);
 
             return _mapper.Map<AccountDto>(user);
+        }
+
+        public async Task<IEnumerable<AccountDto>> BrowseAsync()
+        {
+            var users = await _userRepository.GetAllAsync();
+
+            return _mapper.Map<IEnumerable<AccountDto>>(users);
         }
 
         public async Task RegisterAsync(Guid userId, string email, string name, string password, string role)
