@@ -16,3 +16,5 @@
 2018-05-01 13:47:50.4787|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action ExamApp.Api.Controllers.ExamsController.Get (ExamApp.Api) in 133.498ms
 2018-05-01 13:47:50.4936|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 349.3561ms 200 application/json; charset=utf-8
 2018-05-05 12:28:47.8618|FATAL|Microsoft.AspNetCore.Hosting.Internal.WebHost|Application startup exception
+2018-05-14 20:55:26.7267|FATAL|Microsoft.AspNetCore.Hosting.Internal.WebHost|Application startup exception
+2018-05-14 20:58:09.0543|FATAL|Microsoft.AspNetCore.Hosting.Internal.WebHost|Application startup exception

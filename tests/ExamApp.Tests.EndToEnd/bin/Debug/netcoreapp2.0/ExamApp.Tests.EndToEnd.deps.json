@@ -1,7 +1,7 @@
 {
   "runtimeTarget": {
     "name": ".NETCoreApp,Version=v2.0",
-    "signature": "32865c1a612973433b46ec88d04c0a7e14910037"
+    "signature": "d1426b1938030e96aa59d775f3368d535407cd30"
   },
   "compilationOptions": {},
   "targets": {
@@ -54,28 +54,6 @@
           "lib/netstandard1.3/AutoMapper.dll": {}
         }
       },
-      "DnsClient/1.0.7": {
-        "dependencies": {
-          "Microsoft.Win32.Primitives": "4.3.0",
-          "System.Buffers": "4.4.0",
-          "System.Collections": "4.3.0",
-          "System.Collections.Concurrent": "4.3.0",
-          "System.Globalization.Extensions": "4.3.0",
-          "System.IO.FileSystem": "4.3.0",
-          "System.Linq": "4.3.0",
-          "System.Net.NameResolution": "4.3.0",
-          "System.Net.NetworkInformation": "4.3.0",
-          "System.Net.Sockets": "4.3.0",
-          "System.Runtime.Extensions": "4.3.0",
-          "System.Runtime.InteropServices": "4.3.0",
-          "System.Runtime.InteropServices.RuntimeInformation": "4.3.0",
-          "System.Text.Encoding": "4.3.0",
-          "System.Threading": "4.3.0"
-        },
-        "runtime": {
-          "lib/netstandard1.3/DnsClient.dll": {}
-        }
-      },
       "FluentAssertions/5.3.0": {
         "dependencies": {
           "System.Configuration.ConfigurationManager": "4.4.0",
@@ -122,10 +100,11 @@
           }
         }
       },
-      "Microsoft.ApplicationInsights/2.4.0": {
+      "Microsoft.ApplicationInsights/2.6.1": {
         "dependencies": {
           "System.Diagnostics.DiagnosticSource": "4.4.1",
-          "System.Diagnostics.StackTrace": "4.3.0"
+          "System.Diagnostics.StackTrace": "4.3.0",
+          "System.Net.Requests": "4.3.0"
         },
         "runtime": {
           "lib/netstandard1.3/Microsoft.ApplicationInsights.dll": {}
@@ -133,8 +112,8 @@
       },
       "Microsoft.ApplicationInsights.AspNetCore/2.1.1": {
         "dependencies": {
-          "Microsoft.ApplicationInsights": "2.4.0",
-          "Microsoft.ApplicationInsights.DependencyCollector": "2.4.1",
+          "Microsoft.ApplicationInsights": "2.6.1",
+          "Microsoft.ApplicationInsights.DependencyCollector": "2.6.1",
           "Microsoft.AspNetCore.Hosting": "2.0.2",
           "Microsoft.Extensions.Configuration": "2.0.1",
           "Microsoft.Extensions.Configuration.Json": "2.0.0",
@@ -147,10 +126,11 @@
           "lib/netstandard1.6/Microsoft.ApplicationInsights.AspNetCore.dll": {}
         }
       },
-      "Microsoft.ApplicationInsights.DependencyCollector/2.4.1": {
+      "Microsoft.ApplicationInsights.DependencyCollector/2.6.1": {
         "dependencies": {
-          "Microsoft.ApplicationInsights": "2.4.0",
+          "Microsoft.ApplicationInsights": "2.6.1",
           "Microsoft.Extensions.PlatformAbstractions": "1.1.0",
+          "System.Data.SqlClient": "4.4.0",
           "System.Diagnostics.DiagnosticSource": "4.4.1",
           "System.Diagnostics.StackTrace": "4.3.0"
         },
@@ -2151,7 +2131,7 @@
           }
         }
       },
-      "MongoDB.Bson/2.6.0": {
+      "MongoDB.Bson/2.4.4": {
         "dependencies": {
           "System.Collections.NonGeneric": "4.3.0",
           "System.Diagnostics.Process": "4.1.0",
@@ -2162,21 +2142,19 @@
           "lib/netstandard1.5/MongoDB.Bson.dll": {}
         }
       },
-      "MongoDB.Driver/2.6.0": {
+      "MongoDB.Driver/2.4.4": {
         "dependencies": {
-          "MongoDB.Bson": "2.6.0",
-          "MongoDB.Driver.Core": "2.6.0",
-          "System.ComponentModel.TypeConverter": "4.3.0",
+          "MongoDB.Bson": "2.4.4",
+          "MongoDB.Driver.Core": "2.4.4",
           "System.Linq.Queryable": "4.3.0"
         },
         "runtime": {
           "lib/netstandard1.5/MongoDB.Driver.dll": {}
         }
       },
-      "MongoDB.Driver.Core/2.6.0": {
+      "MongoDB.Driver.Core/2.4.4": {
         "dependencies": {
-          "DnsClient": "1.0.7",
-          "MongoDB.Bson": "2.6.0",
+          "MongoDB.Bson": "2.4.4",
           "System.Collections.Specialized": "4.3.0",
           "System.Diagnostics.TraceSource": "4.0.0",
           "System.Net.NameResolution": "4.3.0",
@@ -2961,51 +2939,37 @@
           }
         }
       },
-      "System.Net.NetworkInformation/4.3.0": {
+      "System.Net.Primitives/4.3.0": {
         "dependencies": {
-          "Microsoft.Win32.Primitives": "4.3.0",
+          "Microsoft.NETCore.Targets": "1.1.0",
+          "System.Runtime": "4.3.0",
+          "System.Runtime.Handles": "4.3.0"
+        }
+      },
+      "System.Net.Requests/4.3.0": {
+        "dependencies": {
           "System.Collections": "4.3.0",
+          "System.Diagnostics.Debug": "4.3.0",
           "System.Diagnostics.Tracing": "4.3.0",
           "System.Globalization": "4.3.0",
           "System.IO": "4.3.0",
-          "System.IO.FileSystem": "4.3.0",
-          "System.IO.FileSystem.Primitives": "4.3.0",
-          "System.Linq": "4.3.0",
+          "System.Net.Http": "4.3.0",
           "System.Net.Primitives": "4.3.0",
-          "System.Net.Sockets": "4.3.0",
+          "System.Net.WebHeaderCollection": "4.3.0",
           "System.Resources.ResourceManager": "4.3.0",
           "System.Runtime": "4.3.0",
-          "System.Runtime.Extensions": "4.3.0",
-          "System.Runtime.Handles": "4.3.0",
-          "System.Runtime.InteropServices": "4.3.0",
-          "System.Security.Principal.Windows": "4.4.0",
           "System.Threading": "4.3.0",
-          "System.Threading.Overlapped": "4.3.0",
-          "System.Threading.Tasks": "4.3.0",
-          "System.Threading.Thread": "4.3.0",
-          "System.Threading.ThreadPool": "4.3.0",
-          "runtime.native.System": "4.3.0"
+          "System.Threading.Tasks": "4.3.0"
         },
         "runtimeTargets": {
-          "runtime/linux/lib/_._": {
-            "rid": "linux",
-            "assetType": "runtime"
-          },
-          "runtime/osx/lib/_._": {
-            "rid": "osx",
+          "runtime/unix/lib/_._": {
+            "rid": "unix",
             "assetType": "runtime"
           },
           "runtime/win/lib/_._": {
             "rid": "win",
             "assetType": "runtime"
           }
-        }
-      },
-      "System.Net.Primitives/4.3.0": {
-        "dependencies": {
-          "Microsoft.NETCore.Targets": "1.1.0",
-          "System.Runtime": "4.3.0",
-          "System.Runtime.Handles": "4.3.0"
         }
       },
       "System.Net.Security/4.3.0": {
@@ -3056,6 +3020,14 @@
           "System.Net.Primitives": "4.3.0",
           "System.Runtime": "4.3.0",
           "System.Threading.Tasks": "4.3.0"
+        }
+      },
+      "System.Net.WebHeaderCollection/4.3.0": {
+        "dependencies": {
+          "System.Collections": "4.3.0",
+          "System.Resources.ResourceManager": "4.3.0",
+          "System.Runtime": "4.3.0",
+          "System.Runtime.Extensions": "4.3.0"
         }
       },
       "System.Numerics.Vectors/4.4.0": {},
@@ -3568,23 +3540,6 @@
           "System.Threading.Tasks": "4.3.0"
         }
       },
-      "System.Threading.Overlapped/4.3.0": {
-        "dependencies": {
-          "System.Resources.ResourceManager": "4.3.0",
-          "System.Runtime": "4.3.0",
-          "System.Runtime.Handles": "4.3.0"
-        },
-        "runtimeTargets": {
-          "runtime/unix/lib/_._": {
-            "rid": "unix",
-            "assetType": "runtime"
-          },
-          "runtime/win/lib/_._": {
-            "rid": "win",
-            "assetType": "runtime"
-          }
-        }
-      },
       "System.Threading.Tasks/4.3.0": {
         "dependencies": {
           "Microsoft.NETCore.Targets": "1.1.0",
@@ -3796,9 +3751,11 @@
           "Autofac": "4.8.0",
           "Autofac.Extensions.DependencyInjection": "4.2.2",
           "ExamApp.Infrastructure": "1.0.0",
+          "Microsoft.ApplicationInsights": "2.6.1",
+          "Microsoft.ApplicationInsights.DependencyCollector": "2.6.1",
           "Microsoft.AspNetCore.All": "2.0.3",
           "Microsoft.AspNetCore.Authentication.JwtBearer": "2.0.3",
-          "MongoDB.Driver": "2.6.0",
+          "MongoDB.Driver": "2.4.4",
           "NLog.Extensions.Logging": "1.0.1",
           "NLog.Web.AspNetCore": "4.5.2"
         },
@@ -3819,7 +3776,7 @@
           "Microsoft.AspNetCore.Authentication.JwtBearer": "2.0.3",
           "Microsoft.Extensions.Configuration": "2.0.1",
           "Microsoft.Extensions.Configuration.Binder": "2.0.1",
-          "MongoDB.Driver": "2.6.0",
+          "MongoDB.Driver": "2.4.4",
           "NLog.Extensions.Logging": "1.0.1"
         },
         "runtime": {
@@ -3855,13 +3812,6 @@
       "path": "automapper/6.2.2",
       "hashPath": "automapper.6.2.2.nupkg.sha512"
     },
-    "DnsClient/1.0.7": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-f3k5ufhUSL658fy/ac1mReqRIr0jGMyOJFvBqJ+7cASq01NIysYbrrRDjboYKAGrd0Y2mc1A749uQvT8vAA91A==",
-      "path": "dnsclient/1.0.7",
-      "hashPath": "dnsclient.1.0.7.nupkg.sha512"
-    },
     "FluentAssertions/5.3.0": {
       "type": "package",
       "serviceable": true,
@@ -3876,12 +3826,12 @@
       "path": "libuv/1.10.0",
       "hashPath": "libuv.1.10.0.nupkg.sha512"
     },
-    "Microsoft.ApplicationInsights/2.4.0": {
+    "Microsoft.ApplicationInsights/2.6.1": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-4dX/zu3Psz9oM3ErU64xfOHuSxOwMxN6q5RabSkeYbX42Yn6dR/kDToqjs+txCRjrfHUxyYjfeJHu+MbCfvAsg==",
-      "path": "microsoft.applicationinsights/2.4.0",
-      "hashPath": "microsoft.applicationinsights.2.4.0.nupkg.sha512"
+      "sha512": "sha512-yA4F5zlQaczEhGb7qkG14UD/w8WUwz08i2Ywzs6YxQpqFOM6402cNrORggTsbT+e8yrgfYsdc6ChAy2qVg6qyA==",
+      "path": "microsoft.applicationinsights/2.6.1",
+      "hashPath": "microsoft.applicationinsights.2.6.1.nupkg.sha512"
     },
     "Microsoft.ApplicationInsights.AspNetCore/2.1.1": {
       "type": "package",
@@ -3890,12 +3840,12 @@
       "path": "microsoft.applicationinsights.aspnetcore/2.1.1",
       "hashPath": "microsoft.applicationinsights.aspnetcore.2.1.1.nupkg.sha512"
     },
-    "Microsoft.ApplicationInsights.DependencyCollector/2.4.1": {
+    "Microsoft.ApplicationInsights.DependencyCollector/2.6.1": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-RWxdX90MY6tNF8S5lwRvJcHiBMIWwVLCxd4TGIEl3X0yAKaolY2vs4zTCvyCIVkEAMs1aInTgWkYwOjzYvAHWw==",
-      "path": "microsoft.applicationinsights.dependencycollector/2.4.1",
-      "hashPath": "microsoft.applicationinsights.dependencycollector.2.4.1.nupkg.sha512"
+      "sha512": "sha512-2mAik2UJMAVWDB1P+kwqhBykR828pDLIfgJjV8Ps+WTzpMSNRzXifMP/JnRZoiRxQ8I+al4YnyF7LkMVMZkzAw==",
+      "path": "microsoft.applicationinsights.dependencycollector/2.6.1",
+      "hashPath": "microsoft.applicationinsights.dependencycollector.2.6.1.nupkg.sha512"
     },
     "Microsoft.AspNetCore/2.0.1": {
       "type": "package",
@@ -5038,26 +4988,26 @@
       "path": "microsoft.win32.registry/4.4.0",
       "hashPath": "microsoft.win32.registry.4.4.0.nupkg.sha512"
     },
-    "MongoDB.Bson/2.6.0": {
+    "MongoDB.Bson/2.4.4": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-r1+TPncS+vJTXH7c53YeKJ9iwZGL3VQxZhCNbqOvWr2bqYMVNaPVuwudi8iO25KMSqRF6p3r26Tad+ORwL13KA==",
-      "path": "mongodb.bson/2.6.0",
-      "hashPath": "mongodb.bson.2.6.0.nupkg.sha512"
+      "sha512": "sha512-BavFx+rmR5k+dx14tC23KTyjCPkASvTQ1WxzLYHt2w3Mkqel5lJV6+gWzWV3DX9hnTewCC09OKqNqckiJl4sIw==",
+      "path": "mongodb.bson/2.4.4",
+      "hashPath": "mongodb.bson.2.4.4.nupkg.sha512"
     },
-    "MongoDB.Driver/2.6.0": {
+    "MongoDB.Driver/2.4.4": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-Xan8v/nscmrb4qcpzOFDguc8ZGxSZSAOFCqH/Mg2Jeu6l9P9QmG6mqIjWyay3IbRmoe9fNvSgSoYDTAP8IQzAw==",
-      "path": "mongodb.driver/2.6.0",
-      "hashPath": "mongodb.driver.2.6.0.nupkg.sha512"
+      "sha512": "sha512-sG+4H7732fG3XGCXWsxwuUQBvnbVO/bzzxBVZHtHa5R2UDsRXR7BfQxAS/d9Qk8FlNDHOjTjz+GzWTgzjgopQw==",
+      "path": "mongodb.driver/2.4.4",
+      "hashPath": "mongodb.driver.2.4.4.nupkg.sha512"
     },
-    "MongoDB.Driver.Core/2.6.0": {
+    "MongoDB.Driver.Core/2.4.4": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-TGSRAD8kiyh7QlkY4WYi6o8xYKmIpsJlZh5I8faVNJc1E+hUbDnJILIOtG41P9MAJl9bxUH7XRUcEoGog9/CVg==",
-      "path": "mongodb.driver.core/2.6.0",
-      "hashPath": "mongodb.driver.core.2.6.0.nupkg.sha512"
+      "sha512": "sha512-fVjXuQE5Qe2P38xz9wz5V0QhT54+ZT78/JUKMMbIXOKYVFgkzEOE7UU6ZsbC/AbR4lwGIpRQZoiv7wW3rJb3xQ==",
+      "path": "mongodb.driver.core/2.4.4",
+      "hashPath": "mongodb.driver.core.2.4.4.nupkg.sha512"
     },
     "Newtonsoft.Json/11.0.2": {
       "type": "package",
@@ -5577,19 +5527,19 @@
       "path": "system.net.nameresolution/4.3.0",
       "hashPath": "system.net.nameresolution.4.3.0.nupkg.sha512"
     },
-    "System.Net.NetworkInformation/4.3.0": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-zNVmWVry0pAu7lcrRBhwwU96WUdbsrGL3azyzsbXmVNptae1+Za+UgOe9Z6s8iaWhPn7/l4wQqhC56HZWq7tkg==",
-      "path": "system.net.networkinformation/4.3.0",
-      "hashPath": "system.net.networkinformation.4.3.0.nupkg.sha512"
-    },
     "System.Net.Primitives/4.3.0": {
       "type": "package",
       "serviceable": true,
       "sha512": "sha512-mWdIwwcsiM8nNLcJBVwRA1kWcLfLgnkOUpNOJgvAuKN34rMkyXwYgJ6OZ+MYs6+lm/8F3v4hf29UlTM9wHelzw==",
       "path": "system.net.primitives/4.3.0",
       "hashPath": "system.net.primitives.4.3.0.nupkg.sha512"
+    },
+    "System.Net.Requests/4.3.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-OZNUuAs0kDXUzm7U5NZ1ojVta5YFZmgT2yxBqsQ7Eseq5Ahz88LInGRuNLJ/NP2F8W1q7tse1pKDthj3reF5QA==",
+      "path": "system.net.requests/4.3.0",
+      "hashPath": "system.net.requests.4.3.0.nupkg.sha512"
     },
     "System.Net.Security/4.3.0": {
       "type": "package",
@@ -5604,6 +5554,13 @@
       "sha512": "sha512-gFvObAUY0zextP0V03UZiZL6xX0afPBEyVTH8w9lg8n9evv1r8D14XdLyPWwWhHEojrNZkbOOlGoo7YnjoMOkQ==",
       "path": "system.net.sockets/4.3.0",
       "hashPath": "system.net.sockets.4.3.0.nupkg.sha512"
+    },
+    "System.Net.WebHeaderCollection/4.3.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-XZrXYG3c7QV/GpWeoaRC02rM6LH2JJetfVYskf35wdC/w2fFDFMphec4gmVH2dkll6abtW14u9Rt96pxd9YH2A==",
+      "path": "system.net.webheadercollection/4.3.0",
+      "hashPath": "system.net.webheadercollection.4.3.0.nupkg.sha512"
     },
     "System.Numerics.Vectors/4.4.0": {
       "type": "package",
@@ -5905,13 +5862,6 @@
       "sha512": "sha512-vuO7B4MSTPmlZDL4ql8sBwPUYAdyPYestTMWoEEy9LhxSX2WunApnC178oysvMHklHn0mxqhQNBDilPlAp+kuA==",
       "path": "system.threading/4.3.0",
       "hashPath": "system.threading.4.3.0.nupkg.sha512"
-    },
-    "System.Threading.Overlapped/4.3.0": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-m3HQ2dPiX/DSTpf+yJt8B0c+SRvzfqAJKx+QDWi+VLhz8svLT23MVjEOHPF/KiSLeArKU/iHescrbLd3yVgyNg==",
-      "path": "system.threading.overlapped/4.3.0",
-      "hashPath": "system.threading.overlapped.4.3.0.nupkg.sha512"
     },
     "System.Threading.Tasks/4.3.0": {
       "type": "package",
