@@ -47,10 +47,10 @@ namespace ExamApp.Api
         public IServiceProvider ConfigureServices(IServiceCollection services)
         {
             //Add framework services.
-            services.AddMvc()
-                .AddJsonOptions(x => x.SerializerSettings.Formatting = Formatting.Indented);
             services.AddMemoryCache(); 
             services.AddAuthorization(x => x.AddPolicy("HasAdminRole", p => p.RequireRole("admin")));
+            services.AddMvc()
+                .AddJsonOptions(x => x.SerializerSettings.Formatting = Formatting.Indented);
             services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
             .AddJwtBearer(options =>
             {
@@ -89,7 +89,6 @@ namespace ExamApp.Api
             SeedData(app);
             app.UseErrorHandler();
             app.UseAuthentication();
-            app.UseMvc();
             appLifetime.ApplicationStopped.Register(() => Container.Dispose());
         }
 
@@ -101,6 +100,7 @@ namespace ExamApp.Api
                 var dataInitializer = app.ApplicationServices.GetService<IDataInitializer>();
                 dataInitializer.SeedAsync();
             }
+            app.UseMvc();
         }
     }
 }
