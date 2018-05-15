@@ -1,0 +1,12 @@
+/home/jarvis/ExamApp/src/ExamApp.Infrastructure/bin/Release/netstandard2.0/ExamApp.Infrastructure.deps.json
+/home/jarvis/ExamApp/src/ExamApp.Infrastructure/bin/Release/netstandard2.0/ExamApp.Infrastructure.dll
+/home/jarvis/ExamApp/src/ExamApp.Infrastructure/bin/Release/netstandard2.0/ExamApp.Infrastructure.pdb
+/home/jarvis/ExamApp/src/ExamApp.Infrastructure/bin/Release/netstandard2.0/ExamApp.Core.dll
+/home/jarvis/ExamApp/src/ExamApp.Infrastructure/bin/Release/netstandard2.0/ExamApp.Core.pdb
+/home/jarvis/ExamApp/src/ExamApp.Infrastructure/obj/Release/netstandard2.0/ExamApp.Infrastructure.csprojAssemblyReference.cache
+/home/jarvis/ExamApp/src/ExamApp.Infrastructure/obj/Release/netstandard2.0/ExamApp.Infrastructure.csproj.CoreCompileInputs.cache
+/home/jarvis/ExamApp/src/ExamApp.Infrastructure/obj/Release/netstandard2.0/ExamApp.Infrastructure.AssemblyInfoInputs.cache
+/home/jarvis/ExamApp/src/ExamApp.Infrastructure/obj/Release/netstandard2.0/ExamApp.Infrastructure.AssemblyInfo.cs
+/home/jarvis/ExamApp/src/ExamApp.Infrastructure/obj/Release/netstandard2.0/ExamApp.Infrastructure.csproj.CopyComplete
+/home/jarvis/ExamApp/src/ExamApp.Infrastructure/obj/Release/netstandard2.0/ExamApp.Infrastructure.dll
+/home/jarvis/ExamApp/src/ExamApp.Infrastructure/obj/Release/netstandard2.0/ExamApp.Infrastructure.pdb

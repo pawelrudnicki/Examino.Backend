@@ -19,3 +19,5 @@
 /home/jarvis/ExamApp/tests/ExamApp.Tests.EndToEnd/obj/Debug/netcoreapp2.0/ExamApp.Tests.EndToEnd.AssemblyInfo.cs
 /home/jarvis/ExamApp/tests/ExamApp.Tests.EndToEnd/obj/Debug/netcoreapp2.0/ExamApp.Tests.EndToEnd.dll
 /home/jarvis/ExamApp/tests/ExamApp.Tests.EndToEnd/obj/Debug/netcoreapp2.0/ExamApp.Tests.EndToEnd.pdb
+/home/jarvis/ExamApp/tests/ExamApp.Tests.EndToEnd/obj/Debug/netcoreapp2.0/ExamApp.Tests.EndToEnd.csprojAssemblyReference.cache
+/home/jarvis/ExamApp/tests/ExamApp.Tests.EndToEnd/obj/Debug/netcoreapp2.0/ExamApp.Tests.EndToEnd.csproj.CopyComplete

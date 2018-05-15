@@ -14,13 +14,13 @@ namespace ExamApp.Infrastructure.Mongo
             {
                 return;
             }
-
-            _initialized = true;
+            RegisterConventions();
         }
 
         private static void RegisterConventions()
         {
             ConventionRegistry.Register("ExaminoConventions", new MongoConvention(), x => true);
+            _initialized = true;
         }
 
         private class MongoConvention : IConventionPack
