@@ -6,3 +6,4 @@
 /home/jarvis/ExamApp/src/ExamApp.Core/obj/Debug/netstandard2.0/ExamApp.Core.AssemblyInfo.cs
 /home/jarvis/ExamApp/src/ExamApp.Core/obj/Debug/netstandard2.0/ExamApp.Core.dll
 /home/jarvis/ExamApp/src/ExamApp.Core/obj/Debug/netstandard2.0/ExamApp.Core.pdb
+/home/jarvis/ExamApp/src/ExamApp.Core/obj/Debug/netstandard2.0/ExamApp.Core.csprojAssemblyReference.cache
