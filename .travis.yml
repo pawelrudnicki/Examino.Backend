@@ -3,7 +3,7 @@ language: csharp
 dist: trusty
 sudo: required
 mono: none
-dotnet: 1.0.1
+dotnet: 2.0.3
 branches:
   only:
     - master
