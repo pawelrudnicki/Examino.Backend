@@ -5,6 +5,7 @@ using ExamApp.Infrastructure.Commands.Exams;
 using ExamApp.Infrastructure.DTO;
 using ExamApp.Infrastructure.Services;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Caching.Memory;
 
@@ -22,6 +23,7 @@ namespace ExamApp.Api.Controllers
         }
 
         [HttpGet]
+        [EnableCors("CorsPolicy")]
         public async Task<IActionResult> Get(string name)
         {
             var exams = _cache.Get<IEnumerable<ExamDto>>("exams");
@@ -40,6 +42,7 @@ namespace ExamApp.Api.Controllers
         }
 
         [HttpGet("{eventId}")]
+        [EnableCors("CorsPolicy")]
         public async Task<IActionResult> Get(Guid eventId)
         {
 
@@ -53,6 +56,7 @@ namespace ExamApp.Api.Controllers
         }
 
         [HttpPost]
+        [EnableCors("CorsPolicy")]
         [Authorize(Policy = "HasAdminRole")]
         public async Task<IActionResult> Post([FromBody]CreateExam command)
         {
@@ -64,6 +68,7 @@ namespace ExamApp.Api.Controllers
         }
 
         [HttpPut("{examId}")]
+        [EnableCors("CorsPolicy")]
         [Authorize(Policy = "HasAdminRole")]
         public async Task<IActionResult> Put(Guid examId, [FromBody]UpdateExam command)
         {
@@ -74,6 +79,7 @@ namespace ExamApp.Api.Controllers
         }
 
         [HttpDelete("{examId}")]
+        [EnableCors("CorsPolicy")]
         [Authorize(Policy = "HasAdminRole")]
         public async Task<IActionResult> Delete(Guid examId)
         {

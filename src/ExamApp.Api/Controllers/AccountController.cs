@@ -5,6 +5,7 @@ using ExamApp.Infrastructure.Commands.Users;
 using ExamApp.Infrastructure.DTO;
 using ExamApp.Infrastructure.Services;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Caching.Memory;
 
@@ -21,6 +22,7 @@ namespace ExamApp.Api.Controllers
         }
 
         [HttpPost("register")]
+        [EnableCors("CorsPolicy")]
         public async Task<IActionResult> Post([FromBody]Register command)
         {
             await _userService.RegisterAsync(Guid.NewGuid(), 
@@ -30,6 +32,7 @@ namespace ExamApp.Api.Controllers
         }
 
         [HttpPost("login")]
+        [EnableCors("CorsPolicy")]
         public async Task<IActionResult> Post([FromBody]Login command)
         => Json(await _userService.LoginAsync(command.Email, command.Password));
     }

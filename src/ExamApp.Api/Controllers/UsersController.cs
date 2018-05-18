@@ -2,6 +2,7 @@ using System;
 using System.Threading.Tasks;
 using ExamApp.Infrastructure.Services;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
 
 namespace ExamApp.Api.Controllers
@@ -22,6 +23,7 @@ namespace ExamApp.Api.Controllers
         }
 
         [HttpGet("{UserId}")]
+        [EnableCors("CorsPolicy")]
         public async Task<IActionResult> Get(Guid UserId)
         {
             var user = await _userService.GetAccountAsync(UserId);

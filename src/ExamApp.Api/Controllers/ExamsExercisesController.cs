@@ -4,6 +4,7 @@ using ExamApp.Core.Domain;
 using ExamApp.Infrastructure.Commands.Exams;
 using ExamApp.Infrastructure.Services;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
 
 namespace ExamApp.Api.Controllers
@@ -18,8 +19,9 @@ namespace ExamApp.Api.Controllers
             _examExerciseService = examExerciseService;
         }
 
-        [Authorize(Policy = "HasAdminRole")]
         [HttpPost]
+        [EnableCors("CorsPolicy")]
+        [Authorize(Policy = "HasAdminRole")]
         public async Task<IActionResult> Post([FromBody]CreateExamExercise command)
         {
             await _examExerciseService.AddAsync(command.ExamId, command.Name, command.Question,
@@ -28,8 +30,9 @@ namespace ExamApp.Api.Controllers
             return NoContent();
         }
 
-        [Authorize(Policy = "HasAdminRole")]
         [HttpDelete]
+        [EnableCors("CorsPolicy")]
+        [Authorize(Policy = "HasAdminRole")]
         public async Task<IActionResult> Delete([FromBody]DeleteExamExercise command)
         {
             await _examExerciseService.DeleteAsync(command.ExamId, command.Name);

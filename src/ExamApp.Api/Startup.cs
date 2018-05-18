@@ -49,6 +49,15 @@ namespace ExamApp.Api
             //Add framework services.
             services.AddMemoryCache(); 
             services.AddAuthorization(x => x.AddPolicy("HasAdminRole", p => p.RequireRole("admin")));
+            services.AddCors(options =>
+            {
+                options.AddPolicy("CorsPolicy", cors => 
+                        cors.AllowAnyOrigin()
+                            .AllowAnyMethod()
+                            .AllowAnyHeader()
+                            .AllowCredentials());
+            });
+
             services.AddMvc()
                 .AddJsonOptions(x => x.SerializerSettings.Formatting = Formatting.Indented);
             services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
@@ -88,6 +97,7 @@ namespace ExamApp.Api
 
             SeedData(app);
             app.UseErrorHandler();
+            app.UseCors("CorsPolicy");
             app.UseAuthentication();
             appLifetime.ApplicationStopped.Register(() => Container.Dispose());
         }
