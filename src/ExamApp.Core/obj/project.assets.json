@@ -30,7 +30,7 @@
   },
   "libraries": {
     "Microsoft.NETCore.Platforms/1.1.0": {
-      "sha512": "kz0PEW2lhqygehI/d6XsPCQzD7ff7gUJaVGPVETX611eadGsA3A877GdSlU0LRVMCTH/+P3o2iDTak+S08V2+A==",
+      "sha512": "eRAnHkaYzVty64giqkkdrYLlcgaLnebj3GAE2fq8dTgPOVFEJu4q6rDvgtLBISeLyAy3JebG5wCj1MEP4i6ovg==",
       "type": "package",
       "path": "microsoft.netcore.platforms/1.1.0",
       "files": [
@@ -177,23 +177,23 @@
     ]
   },
   "packageFolders": {
-    "/Users/pawel_rudnicki/.nuget/packages/": {},
-    "/usr/local/share/dotnet/sdk/NuGetFallbackFolder": {}
+    "/home/jarvis/.nuget/packages/": {},
+    "/usr/share/dotnet/sdk/NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/pawel_rudnicki/Desktop/ExamApp/src/ExamApp.Core/ExamApp.Core.csproj",
+      "projectUniqueName": "/home/jarvis/ExamApp/src/ExamApp.Core/ExamApp.Core.csproj",
       "projectName": "ExamApp.Core",
-      "projectPath": "/Users/pawel_rudnicki/Desktop/ExamApp/src/ExamApp.Core/ExamApp.Core.csproj",
-      "packagesPath": "/Users/pawel_rudnicki/.nuget/packages/",
-      "outputPath": "/Users/pawel_rudnicki/Desktop/ExamApp/src/ExamApp.Core/obj/",
+      "projectPath": "/home/jarvis/ExamApp/src/ExamApp.Core/ExamApp.Core.csproj",
+      "packagesPath": "/home/jarvis/.nuget/packages/",
+      "outputPath": "/home/jarvis/ExamApp/src/ExamApp.Core/obj/",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
+        "/usr/share/dotnet/sdk/NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "/Users/pawel_rudnicki/.nuget/NuGet/NuGet.Config"
+        "/home/jarvis/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "netstandard2.0"
