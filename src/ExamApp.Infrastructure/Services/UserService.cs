@@ -21,6 +21,13 @@ namespace ExamApp.Infrastructure.Services
             _mapper = mapper;
         }
 
+        public async Task<AccountDto> GetAsync(string email)
+        {
+            var user = await _userRepository.GetAsync(email);
+
+            return _mapper.Map<User, AccountDto>(user);
+        }
+
         public async Task<AccountDto> GetAccountAsync(Guid userId)
         {
             var user = await _userRepository.GetOrFailAsync(userId);
