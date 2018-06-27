@@ -64,14 +64,6 @@ namespace ExamApp.Infrastructure.Services
             {
                 throw new Exception("Invalid credentials.");
             }
-            var jwt = _jwtHandler.CreateToken(user.Id, user.Role);
-
-            return new TokenDto
-            {
-                Token = jwt.Token,
-                Expires = jwt.Expires,
-                Role = user.Role
-            };
         }
     }
 }
