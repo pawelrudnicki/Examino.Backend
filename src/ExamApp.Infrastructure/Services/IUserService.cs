@@ -11,6 +11,6 @@ namespace ExamApp.Infrastructure.Services
         Task<AccountDto> GetAccountAsync(Guid userId);
         Task<IEnumerable<AccountDto>> BrowseAsync();
         Task RegisterAsync(Guid userId, string email, string name, string password, string role); 
-        Task<TokenDto> LoginAsync(string email, string password);
+        Task LoginAsync(string email, string password);
     }
 }

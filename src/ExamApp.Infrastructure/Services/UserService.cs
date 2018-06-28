@@ -53,7 +53,7 @@ namespace ExamApp.Infrastructure.Services
             await _userRepository.AddAsync(user);
         }
 
-        public async Task<TokenDto> LoginAsync(string email, string password)
+        public async Task LoginAsync(string email, string password)
         {
             var user = await _userRepository.GetAsync(email);
             if(user == null)
