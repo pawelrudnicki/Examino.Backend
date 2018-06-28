@@ -14,9 +14,9 @@ namespace ExamApp.Infrastructure.Services
     public class JwtHandler : IJwtHandler
     {
         private readonly JwtSettings _jwtSettings;
-        public JwtHandler(IOptions<JwtSettings> jwtSettings)
+        public JwtHandler(JwtSettings jwtSettings)
         {
-            _jwtSettings = jwtSettings.Value;
+            _jwtSettings = jwtSettings;
         }
 
         public JwtDto CreateToken(Guid userId, string role)
@@ -26,7 +26,7 @@ namespace ExamApp.Infrastructure.Services
             {
                 new Claim(JwtRegisteredClaimNames.Sub, userId.ToString()),
                 new Claim(JwtRegisteredClaimNames.UniqueName, userId.ToString()),
-                new Claim(ClaimTypes.Role, role.ToString()),
+                new Claim(ClaimTypes.Role, role),
                 new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString()),
                 new Claim(JwtRegisteredClaimNames.Iat, now.ToTimestamp().ToString()),
             };

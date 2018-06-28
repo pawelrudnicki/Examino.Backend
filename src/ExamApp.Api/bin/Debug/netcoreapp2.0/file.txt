@@ -179,3 +179,15 @@
 2018-06-28 10:57:37.6743|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action ExamApp.Api.Controllers.AccountController.Post (ExamApp.Api) in 99.1009ms
 2018-06-28 10:57:37.6936|ERROR|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HLESQKP563RC", Request id "0HLESQKP563RC:00000001": An unhandled exception was thrown by the application.
 2018-06-28 10:57:37.6980|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 289.7813ms 500 
+2018-06-28 13:53:45.0102|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 POST http://localhost:5000/account/login application/json 55
+2018-06-28 13:53:45.1756|INFO|Microsoft.AspNetCore.Cors.Infrastructure.CorsService|Policy execution successful.
+2018-06-28 13:53:45.2592|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executing action method ExamApp.Api.Controllers.AccountController.Post (ExamApp.Api) with arguments (ExamApp.Infrastructure.Commands.Users.Login) - ModelState is Valid
+2018-06-28 13:53:45.2739|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action ExamApp.Api.Controllers.AccountController.Post (ExamApp.Api) in 98.1086ms
+2018-06-28 13:53:45.2934|ERROR|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HLESTN6HPNT3", Request id "0HLESTN6HPNT3:00000001": An unhandled exception was thrown by the application.
+2018-06-28 13:53:45.2975|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 294.563ms 500 
+2018-06-28 14:00:27.1934|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 POST http://localhost:5000/account/login application/json 55
+2018-06-28 14:00:27.3661|INFO|Microsoft.AspNetCore.Cors.Infrastructure.CorsService|Policy execution successful.
+2018-06-28 14:00:27.4524|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executing action method ExamApp.Api.Controllers.AccountController.Post (ExamApp.Api) with arguments (ExamApp.Infrastructure.Commands.Users.Login) - ModelState is Valid
+2018-06-28 14:00:27.4999|INFO|Microsoft.AspNetCore.Mvc.Formatters.Json.Internal.JsonResultExecutor|Executing JsonResult, writing value ExamApp.Infrastructure.DTO.TokenDto.
+2018-06-28 14:00:27.5110|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action ExamApp.Api.Controllers.AccountController.Post (ExamApp.Api) in 144.2871ms
+2018-06-28 14:00:27.5156|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 329.4795ms 200 application/json; charset=utf-8
