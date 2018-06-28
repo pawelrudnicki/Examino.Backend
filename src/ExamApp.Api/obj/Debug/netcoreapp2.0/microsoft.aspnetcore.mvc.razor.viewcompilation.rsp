@@ -1,0 +1,5 @@
+/home/jarvis/ExamApp/src/ExamApp.Api
+--output-path=obj/Debug/netcoreapp2.0/
+--application-name=ExamApp.Api
+--content-root=/home/jarvis/ExamApp/src/ExamApp.Api
+--file=
