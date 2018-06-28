@@ -53,7 +53,7 @@ namespace ExamApp.Infrastructure.Services
             await _userRepository.AddAsync(user);
         }
 
-        public async Task LoginAsync(string email, string password)
+        public async Task<TokenDto> LoginAsync(string email, string password)
         {
             var user = await _userRepository.GetAsync(email);
             if(user == null)
@@ -64,6 +64,14 @@ namespace ExamApp.Infrastructure.Services
             {
                 throw new Exception("Invalid credentials.");
             }
+            var jwt = _jwtHandler.CreateToken(user.Id, user.Role);
+
+            return new TokenDto
+            {
+                Token = jwt.Token,
+                Expires = jwt.Expires,
+                Role = user.Role
+            };
         }
     }
 }

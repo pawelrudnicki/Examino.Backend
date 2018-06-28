@@ -97,3 +97,85 @@
 2018-05-14 21:36:52.2084|INFO|Microsoft.AspNetCore.Mvc.Formatters.Json.Internal.JsonResultExecutor|Executing JsonResult, writing value System.Collections.Generic.List`1[ExamApp.Infrastructure.DTO.AccountDto].
 2018-05-14 21:36:52.2130|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action ExamApp.Api.Controllers.UsersController.Get (ExamApp.Api) in 20.896ms
 2018-05-14 21:36:52.2130|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 28.3079ms 200 application/json; charset=utf-8
+2018-06-28 10:21:05.2078|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 GET http://localhost:5000/users  
+2018-06-28 10:21:05.3678|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executing action method ExamApp.Api.Controllers.UsersController.Get (ExamApp.Api) with arguments ((null)) - ModelState is Valid
+2018-06-28 10:21:13.5769|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 GET http://localhost:5000/exams  
+2018-06-28 10:21:13.6158|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executing action method ExamApp.Api.Controllers.ExamsController.Get (ExamApp.Api) with arguments () - ModelState is Valid
+2018-06-28 10:21:13.6223|INFO|ExamApp.Infrastructure.Services.ExamService|Fetching exams
+2018-06-28 10:21:17.5764|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 GET http://localhost:5000/exams  
+2018-06-28 10:21:17.5787|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executing action method ExamApp.Api.Controllers.ExamsController.Get (ExamApp.Api) with arguments () - ModelState is Valid
+2018-06-28 10:21:17.5787|INFO|ExamApp.Infrastructure.Services.ExamService|Fetching exams
+2018-06-28 10:21:35.3926|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action ExamApp.Api.Controllers.UsersController.Get (ExamApp.Api) in 30031.5887ms
+2018-06-28 10:21:35.3966|ERROR|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HLESQ0BQU2L3", Request id "0HLESQ0BQU2L3:00000001": An unhandled exception was thrown by the application.
+2018-06-28 10:21:35.3966|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 30195.4295ms 0 
+2018-06-28 10:21:43.6338|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action ExamApp.Api.Controllers.ExamsController.Get (ExamApp.Api) in 30033.0212ms
+2018-06-28 10:21:43.6338|ERROR|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HLESQ0BQU2L4", Request id "0HLESQ0BQU2L4:00000001": An unhandled exception was thrown by the application.
+2018-06-28 10:21:43.6338|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 30057.9716ms 0 
+2018-06-28 10:21:47.5849|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action ExamApp.Api.Controllers.ExamsController.Get (ExamApp.Api) in 30006.7465ms
+2018-06-28 10:21:47.5855|ERROR|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HLESQ0BQU2L6", Request id "0HLESQ0BQU2L6:00000001": An unhandled exception was thrown by the application.
+2018-06-28 10:21:47.5855|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 30009.5525ms 0 
+2018-06-28 10:22:18.2326|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 POST http://localhost:5000/account/login application/json 55
+2018-06-28 10:22:18.3956|INFO|Microsoft.AspNetCore.Cors.Infrastructure.CorsService|Policy execution successful.
+2018-06-28 10:22:18.5020|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executing action method ExamApp.Api.Controllers.AccountController.Post (ExamApp.Api) with arguments (ExamApp.Infrastructure.Commands.Users.Login) - ModelState is Valid
+2018-06-28 10:22:48.5162|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action ExamApp.Api.Controllers.AccountController.Post (ExamApp.Api) in 30118.189ms
+2018-06-28 10:22:48.5188|ERROR|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HLESQ11JB36E", Request id "0HLESQ11JB36E:00000001": An unhandled exception was thrown by the application.
+2018-06-28 10:22:48.5230|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 30297.2112ms 500 
+2018-06-28 10:23:58.2766|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 GET http://localhost:5000/exams  
+2018-06-28 10:23:58.4758|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executing action method ExamApp.Api.Controllers.ExamsController.Get (ExamApp.Api) with arguments () - ModelState is Valid
+2018-06-28 10:23:58.4845|INFO|ExamApp.Infrastructure.Services.ExamService|Fetching exams
+2018-06-28 10:24:28.5027|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action ExamApp.Api.Controllers.ExamsController.Get (ExamApp.Api) in 30049.2668ms
+2018-06-28 10:24:28.5153|ERROR|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HLESQ1VDDI6T", Request id "0HLESQ1VDDI6T:00000001": An unhandled exception was thrown by the application.
+2018-06-28 10:24:28.5176|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 30247.4449ms 500 
+2018-06-28 10:25:04.3741|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 POST http://localhost:5000/account/login application/json 55
+2018-06-28 10:25:04.5384|INFO|Microsoft.AspNetCore.Cors.Infrastructure.CorsService|Policy execution successful.
+2018-06-28 10:25:04.6308|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executing action method ExamApp.Api.Controllers.AccountController.Post (ExamApp.Api) with arguments (ExamApp.Infrastructure.Commands.Users.Login) - ModelState is Valid
+2018-06-28 10:25:34.6467|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action ExamApp.Api.Controllers.AccountController.Post (ExamApp.Api) in 30105.8778ms
+2018-06-28 10:25:34.6585|ERROR|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HLESQ2J3OCOM", Request id "0HLESQ2J3OCOM:00000001": An unhandled exception was thrown by the application.
+2018-06-28 10:25:34.6635|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 30296.8244ms 500 
+2018-06-28 10:27:14.2744|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 POST http://localhost:5000/account/login application/json 55
+2018-06-28 10:27:14.4351|INFO|Microsoft.AspNetCore.Cors.Infrastructure.CorsService|Policy execution successful.
+2018-06-28 10:27:14.5201|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executing action method ExamApp.Api.Controllers.AccountController.Post (ExamApp.Api) with arguments (ExamApp.Infrastructure.Commands.Users.Login) - ModelState is Valid
+2018-06-28 10:27:44.5316|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action ExamApp.Api.Controllers.AccountController.Post (ExamApp.Api) in 30093.9246ms
+2018-06-28 10:27:44.5446|ERROR|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HLESQ3PQJCE8", Request id "0HLESQ3PQJCE8:00000001": An unhandled exception was thrown by the application.
+2018-06-28 10:27:44.5494|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 30281.0003ms 500 
+2018-06-28 10:37:36.3076|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 GET http://localhost:5000/exams  
+2018-06-28 10:37:36.5132|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executing action method ExamApp.Api.Controllers.ExamsController.Get (ExamApp.Api) with arguments () - ModelState is Valid
+2018-06-28 10:37:36.5216|INFO|ExamApp.Infrastructure.Services.ExamService|Fetching exams
+2018-06-28 10:37:36.5900|INFO|Microsoft.AspNetCore.Mvc.Formatters.Json.Internal.JsonResultExecutor|Executing JsonResult, writing value System.Collections.Generic.List`1[ExamApp.Infrastructure.DTO.ExamDto].
+2018-06-28 10:37:36.6428|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action ExamApp.Api.Controllers.ExamsController.Get (ExamApp.Api) in 151.9749ms
+2018-06-28 10:37:36.6466|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 345.9239ms 200 application/json; charset=utf-8
+2018-06-28 10:37:43.4983|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 GET http://localhost:5000/users  
+2018-06-28 10:37:43.5040|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executing action method ExamApp.Api.Controllers.UsersController.Get (ExamApp.Api) with arguments ((null)) - ModelState is Valid
+2018-06-28 10:37:43.5191|INFO|Microsoft.AspNetCore.Mvc.Formatters.Json.Internal.JsonResultExecutor|Executing JsonResult, writing value System.Collections.Generic.List`1[ExamApp.Infrastructure.DTO.AccountDto].
+2018-06-28 10:37:43.5260|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action ExamApp.Api.Controllers.UsersController.Get (ExamApp.Api) in 21.3891ms
+2018-06-28 10:37:43.5260|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 28.5236ms 200 application/json; charset=utf-8
+2018-06-28 10:38:09.8729|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 POST http://localhost:5000/account/login application/json 55
+2018-06-28 10:38:09.8799|INFO|Microsoft.AspNetCore.Cors.Infrastructure.CorsService|Policy execution successful.
+2018-06-28 10:38:09.9106|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executing action method ExamApp.Api.Controllers.AccountController.Post (ExamApp.Api) with arguments (ExamApp.Infrastructure.Commands.Users.Login) - ModelState is Valid
+2018-06-28 10:38:10.0227|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action ExamApp.Api.Controllers.AccountController.Post (ExamApp.Api) in 144.0099ms
+2018-06-28 10:38:10.0425|ERROR|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HLESQ9J6P4OV", Request id "0HLESQ9J6P4OV:00000001": An unhandled exception was thrown by the application.
+2018-06-28 10:38:10.0425|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 171.8247ms 500 
+2018-06-28 10:38:40.5467|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 POST http://localhost:5000/account/login application/json 55
+2018-06-28 10:38:40.7143|INFO|Microsoft.AspNetCore.Cors.Infrastructure.CorsService|Policy execution successful.
+2018-06-28 10:38:40.7990|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executing action method ExamApp.Api.Controllers.AccountController.Post (ExamApp.Api) with arguments (ExamApp.Infrastructure.Commands.Users.Login) - ModelState is Valid
+2018-06-28 10:38:40.8343|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action ExamApp.Api.Controllers.AccountController.Post (ExamApp.Api) in 120.3793ms
+2018-06-28 10:38:40.8534|ERROR|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HLESQA6BC6TA", Request id "0HLESQA6BC6TA:00000001": An unhandled exception was thrown by the application.
+2018-06-28 10:38:40.8579|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 318.1539ms 500 
+2018-06-28 10:45:03.4278|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 POST http://localhost:5000/account/login application/json 55
+2018-06-28 10:45:03.5891|INFO|Microsoft.AspNetCore.Cors.Infrastructure.CorsService|Policy execution successful.
+2018-06-28 10:45:03.6740|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executing action method ExamApp.Api.Controllers.AccountController.Post (ExamApp.Api) with arguments (ExamApp.Infrastructure.Commands.Users.Login) - ModelState is Valid
+2018-06-28 10:45:03.7090|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action ExamApp.Api.Controllers.AccountController.Post (ExamApp.Api) in 120.094ms
+2018-06-28 10:45:03.7277|ERROR|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HLESQDOES5JE", Request id "0HLESQDOES5JE:00000001": An unhandled exception was thrown by the application.
+2018-06-28 10:45:03.7324|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 310.7592ms 500 
+2018-06-28 10:54:30.9729|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 POST http://localhost:5000/account/login application/json 55
+2018-06-28 10:54:31.1346|INFO|Microsoft.AspNetCore.Cors.Infrastructure.CorsService|Policy execution successful.
+2018-06-28 10:54:31.2191|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executing action method ExamApp.Api.Controllers.AccountController.Post (ExamApp.Api) with arguments (ExamApp.Infrastructure.Commands.Users.Login) - ModelState is Valid
+2018-06-28 10:54:31.2340|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action ExamApp.Api.Controllers.AccountController.Post (ExamApp.Api) in 99.1807ms
+2018-06-28 10:54:31.2541|ERROR|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HLESQJ1JCTH1", Request id "0HLESQJ1JCTH1:00000001": An unhandled exception was thrown by the application.
+2018-06-28 10:54:31.2584|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 291.6473ms 500 
+2018-06-28 10:57:37.4143|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request starting HTTP/1.1 POST http://localhost:5000/account/login application/json 55
+2018-06-28 10:57:37.5745|INFO|Microsoft.AspNetCore.Cors.Infrastructure.CorsService|Policy execution successful.
+2018-06-28 10:57:37.6588|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executing action method ExamApp.Api.Controllers.AccountController.Post (ExamApp.Api) with arguments (ExamApp.Infrastructure.Commands.Users.Login) - ModelState is Valid
+2018-06-28 10:57:37.6743|INFO|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|Executed action ExamApp.Api.Controllers.AccountController.Post (ExamApp.Api) in 99.1009ms
+2018-06-28 10:57:37.6936|ERROR|Microsoft.AspNetCore.Server.Kestrel|Connection id "0HLESQKP563RC", Request id "0HLESQKP563RC:00000001": An unhandled exception was thrown by the application.
+2018-06-28 10:57:37.6980|INFO|Microsoft.AspNetCore.Hosting.Internal.WebHost|Request finished in 289.7813ms 500 

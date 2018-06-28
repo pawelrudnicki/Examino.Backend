@@ -14,14 +14,12 @@ namespace ExamApp.Api.Controllers
 {
     public class AccountController : ApiControllerBase
     {
-        private readonly IJwtHandler _jwtHandler;
         private readonly IUserService _userService;
         private readonly IMemoryCache _cache;
-        public AccountController(IUserService userService, IMemoryCache cache, IJwtHandler jwtHandler)
+        public AccountController(IUserService userService, IMemoryCache cache)
         {
             _userService = userService;
             _cache = cache;
-            _jwtHandler = jwtHandler;
         }
 
         [HttpPost("register")]
@@ -37,16 +35,6 @@ namespace ExamApp.Api.Controllers
         [HttpPost("login")]
         [EnableCors("CorsPolicy")]
         public async Task<IActionResult> Post([FromBody]Login command)
-        {
-            await _userService.LoginAsync(command.Email, command.Password);
-
-            var user = await _userService.GetAsync(command.Email);
-            var jwtek = _jwtHandler.CreateToken(user.Id, user.Role);
-            command.TokenId = Guid.NewGuid();
-            _cache.SetJwt(command.TokenId, jwtek);
-            var jwt = _cache.GetJwt(command.TokenId);
-
-            return Json(jwt);
-        }
+            => Json(await _userService.LoginAsync(command.Email, command.Password));
     }
 }
