@@ -57,7 +57,6 @@ namespace ExamApp.Api.Controllers
 
         [HttpPost]
         [EnableCors("CorsPolicy")]
-        [Authorize(Policy = "HasAdminRole")]
         public async Task<IActionResult> Post([FromBody]CreateExam command)
         {
             command.ExamId = Guid.NewGuid();
@@ -69,7 +68,6 @@ namespace ExamApp.Api.Controllers
 
         [HttpPut("{examId}")]
         [EnableCors("CorsPolicy")]
-        [Authorize(Policy = "HasAdminRole")]
         public async Task<IActionResult> Put(Guid examId, [FromBody]UpdateExam command)
         {
             await _examService.UpdateAsync(examId, command.Name,
@@ -80,7 +78,6 @@ namespace ExamApp.Api.Controllers
 
         [HttpDelete("{examId}")]
         [EnableCors("CorsPolicy")]
-        [Authorize(Policy = "HasAdminRole")]
         public async Task<IActionResult> Delete(Guid examId)
         {
             await _examService.DeleteAsync(examId);

@@ -21,7 +21,6 @@ namespace ExamApp.Api.Controllers
 
         [HttpPost]
         [EnableCors("CorsPolicy")]
-        [Authorize(Policy = "HasAdminRole")]
         public async Task<IActionResult> Post([FromBody]CreateExamExercise command)
         {
             await _examExerciseService.AddAsync(command.ExamId, command.Name, command.Question,
@@ -32,7 +31,6 @@ namespace ExamApp.Api.Controllers
 
         [HttpDelete]
         [EnableCors("CorsPolicy")]
-        [Authorize(Policy = "HasAdminRole")]
         public async Task<IActionResult> Delete([FromBody]DeleteExamExercise command)
         {
             await _examExerciseService.DeleteAsync(command.ExamId, command.Name);
